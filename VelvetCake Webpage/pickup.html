@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pickup - VelvetCake Bakery</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .page-container {
+      min-height: calc(100vh - 80px);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="logo">🍰 VelvetCake</a>
+      <ul class="nav-links">
+        <li><a href="orders.html">Orders</a></li>
+        <li><a href="design.html">Design</a></li>
+        <li><a href="pickup.html">Pickup</a></li>
+        <li><button id="info-btn" class="cream-btn">Schedule 📅</button></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-container">
+    <h1 style="color: #a0522d; margin-bottom: 1rem;">Pickup Locations</h1>
+    <p style="max-width: 600px; text-align: center; color: #666; margin-bottom: 2rem;">Find your nearest VelvetCake bakery.</p>
+    <div class="pickup-info">
+      <div class="order-card glass-card">
+        <h3>Main Bakery</h3>
+        <p><strong>123 Cake St, Downtown</strong><br>Mon-Fri 9AM-8PM<br>Sat-Sun 10AM-6PM</p>
+      </div>
+      <div class="order-card glass-card">
+        <h3>Express Pickup</h3>
+        <p><strong>456 Frosting Ave</strong><br>24/7 Automated Locker</p>
+      </div>
+    </div>
+    <div style="margin-top: 2rem;">
+      <a href="orders.html" style="text-decoration: none;"><button class="cream-btn">← Back to Orders</button></a>
+    </div>
+  </div>
+
+  <div class="modal">
+    <div class="modal-content glass-card">
+      <span class="close">&times;</span>
+      <h2>📅 Bakery Schedule</h2>
+      <ul style="list-style: none; padding: 1rem 0;">
+        <li><strong>Mon-Fri:</strong> 9AM - 8PM</li>
+        <li><strong>Sat-Sun:</strong> 10AM - 6PM</li>
+        <li><strong>Holidays:</strong> Check here</li>
+        <li><strong>Custom:</strong> 48hr notice</li>
+      </ul>
+      <button class="cream-btn" style="width: 100%;">Book</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
