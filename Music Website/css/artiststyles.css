@@ -1,0 +1,102 @@
+body {
+    background: linear-gradient(-100deg, #fabfbf 0%, #0030cf 100%);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    height: 70px;
+    border-radius: 3px solid #e0e7ff;
+    position: sticky;
+    top: 0;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #1e293b;
+    letter-spacing: -1px;
+    text-shadow:
+        0 0 5px #00bfff,
+        0 0 10px #00bfff,
+        0 0 20px #00bfff,
+        0 0 40px #00bfff;
+}
+
+.nav-menu {
+    top: 0px;
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    background: #2563eb;
+    color: #fabfbf;
+    padding: 6px 18px;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+
+
+/* Artist Section */
+.artist-header {
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 700;
+    font-style: oblique;
+    font-size: 1.5rem;
+    text-shadow:
+        0 0 5px rgba(0, 255, 255, 0.8),
+        0 0 10px rgba(0, 255, 255, 0.5),
+        0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+.artist-section {
+    padding: 60px 10%;
+    background: linear-gradient(-100deg, #fabfbf 0%, #0030cf 100%);
+}
+
+.artist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.artist-card {
+    text-decoration: none;
+    background: linear-gradient(-100deg, #0030cf 0%, #fabfbf 100%);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow:
+        0 0 5px #00bfff,
+        0 0 10px #00bfff,
+        0 0 20px #00bfff,
+        0 0 40px #00bfff;
+    transition: all 0.3s ease;
+    color: #1e293b;
+}
+
+.artist-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.artist-card h3 {
+    margin: 15px 15px 15px;
+    font-size: 1.5rem;
+}
+
+.artist-card p {
+    margin: 0 15px 20px;
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+.artist-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
