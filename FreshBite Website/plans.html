@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meal Plans App - Plans</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="logo">🍽️ MealMaster</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="meals.html">Meals</a></li>
+        <li><a href="billing.html">Billing</a></li>
+        <li><a href="plans.html">Plans</a></li>
+      </ul>
+      <button class="login-btn">Login</button>
+    </div>
+  </nav>
+
+  <div class="login-overlay" id="loginOverlay">
+    <div class="login-header">
+      <h2>Login</h2>
+      <button class="close-btn">&times;</button>
+    </div>
+    <form class="login-form">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="demo@example.com" required>
+      
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Enter password" required>
+      
+      <button type="submit" class="login-submit">Sign In</button>
+      <p class="demo-text">Demo: yourusername@example.com / demo123</p>
+    </form>
+  </div>
+
+  <main>
+    <h1 class="page-title">📅 Subscription Plans</h1>
+    <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem; color: #666;">
+      Choose the perfect plan for your lifestyle. Login popup slides from right side on all 4 pages.
+    </p>
+    
+    <div class="content-grid">
+      <div class="card">
+        <h3>🥚 Starter</h3>
+        <p>5 meals/week<br><strong>$9.99/week</strong><br>Basic recipes & grocery list</p>
+      </div>
+      
+      <div class="card">
+        <h3>🍽️ Standard</h3>
+        <p>10 meals/week<br><strong>$19.99/week</strong><br>+ Nutrition tracking</p>
+      </div>
+      
+      <div class="card">
+        <h3>👨‍👩‍👧 Family</h3>
+        <p>20 meals/week (4 servings)<br><strong>$49.99/week</strong><br>Family recipes</p>
+      </div>
+      
+      <div class="card">
+        <h3>💪 Premium</h3>
+        <p>Unlimited meals<br><strong>$29.99/week</strong><br>+ Personal coach</p>
+      </div>
+      
+      <div class="card">
+        <h3>🌱 Vegan</h3>
+        <p>10 plant-based meals/week<br><strong>$24.99/week</strong><br>Specialty diet</p>
+      </div>
+      
+      <div class="card">
+        <h3>🥗 Custom</h3>
+        <p>Tailored to your needs<br><strong>Contact us</strong><br>Build your own</p>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

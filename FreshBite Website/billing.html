@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meal Plans App - Billing</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="logo">🍽️ MealMaster</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="meals.html">Meals</a></li>
+        <li><a href="billing.html">Billing</a></li>
+        <li><a href="plans.html">Plans</a></li>
+      </ul>
+      <button class="login-btn">Login</button>
+    </div>
+  </nav>
+
+  <div class="login-overlay" id="loginOverlay">
+    <div class="login-header">
+      <h2>Login</h2>
+      <button class="close-btn">&times;</button>
+    </div>
+    <form class="login-form">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="demo@example.com" required>
+      
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Enter password" required>
+      
+      <button type="submit" class="login-submit">Sign In</button>
+      <p class="demo-text">Demo: yourusername@example.com / demo123</p>
+    </form>
+  </div>
+
+  <main>
+    <h1 class="page-title">💳 Billing & Payments</h1>
+    <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem; color: #666;">
+      Secure and transparent billing. Side login popup available on all pages.
+    </p>
+    
+    <div class="content-grid">
+      <div class="card">
+        <h3>📋 Current Balance</h3>
+        <p><strong>$24.99</strong> due for current month.<br> Next billing date: <strong>15th</strong></p>
+      </div>
+      
+      <div class="card">
+        <h3>💳 Payment Methods</h3>
+        <p>Visa ****-****-1234 (Default)<br>PayPal connected</p>
+      </div>
+      
+      <div class="card">
+        <h3>📈 Usage History</h3>
+        <p>8 meals delivered this month<br>Total spent: $89.97</p>
+      </div>
+      
+      <div class="card">
+        <h3>🔄 Auto-renew</h3>
+        <p>Weekly plan auto-renews every Sunday. Cancel anytime.</p>
+      </div>
+      
+      <div class="card">
+        <h3>💰 Invoice</h3>
+        <p>Download PDF invoice for tax purposes. All transactions secure.</p>
+      </div>
+      
+      <div class="card">
+        <h3>🆘 Support</h3>
+        <p>Billing questions? Contact: support@mealmaster.com</p>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

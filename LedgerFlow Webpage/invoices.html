@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invoices - LedgerFlow</title>
+<link rel="stylesheet" href="css/invoices.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="index.html" class="logo"><img src="ledgericon.png" alt="LedgerFlow" class="logo-icon">LedgerFlow</a>
+      <ul class="nav-links">
+        <li><a href="invoices.html" class="nav-link active">Invoices</a></li>
+        <li><a href="clients.html" class="nav-link">Clients</a></li>
+        <li><a href="pay.html" class="nav-link">Pay</a></li>
+        <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="page-header">
+      <h1 class="page-title">Invoices</h1>
+      <button class="btn-primary">
+        <i class="fas fa-plus"></i> Create New Invoice
+      </button>
+    </div>
+
+    <div class="summary-grid">
+      <div class="summary-card">
+        <div class="summary-number">127</div>
+        <div class="summary-label">Total Invoices</div>
+      </div>
+      <div class="summary-card">
+        <div class="summary-number text-success">94</div>
+        <div class="summary-label">Paid</div>
+      </div>
+      <div class="summary-card">
+        <div class="summary-number text-warning">24</div>
+        <div class="summary-label">Pending</div>
+      </div>
+      <div class="summary-card">
+        <div class="summary-number text-danger">9</div>
+        <div class="summary-label">Overdue</div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <input type="text" id="search" class="search-input" placeholder="Search invoices...">
+      <select id="filter" class="filter-select">
+        <option value="all">All Status</option>
+        <option value="paid">Paid</option>
+        <option value="pending">Pending</option>
+        <option value="overdue">Overdue</option>
+      </select>
+    </div>
+
+    <div class="invoice-grid">
+      <div class="data-card">
+        <div class="invoice-header">
+          <div>
+            <h3>#INV-001</h3>
+            <div class="data-meta">Acme Corp</div>
+          </div>
+          <span class="status-badge status-paid">Paid</span>
+        </div>
+        <div style="font-size: 2rem; font-weight: 800; color: var(--navy); margin: 1rem 0;">$2,450</div>
+        <div class="data-meta">Due: 2024-01-15</div>
+        <div class="data-actions">
+          <i class="fas fa-eye" style="color: var(--teal); cursor: pointer;"></i>
+          <i class="fas fa-download" style="color: var(--teal); cursor: pointer;"></i>
+        </div>
+      </div>
+      <div class="data-card">
+        <div class="invoice-header">
+          <div>
+            <h3>#INV-002</h3>
+            <div class="data-meta">Tech Solutions</div>
+          </div>
+          <span class="status-badge status-pending">Pending</span>
+        </div>
+        <div style="font-size: 2rem; font-weight: 800; color: var(--navy); margin: 1rem 0;">$1,890</div>
+        <div class="data-meta">Due: 2024-02-01</div>
+        <div class="data-actions">
+          <i class="fas fa-eye" style="color: var(--teal); cursor: pointer;"></i>
+          <i class="fas fa-download" style="color: var(--teal); cursor: pointer;"></i>
+        </div>
+      </div>
+      <div class="data-card">
+        <div class="invoice-header">
+          <div>
+            <h3>#INV-003</h3>
+            <div class="data-meta">Global Trade Ltd</div>
+          </div>
+          <span class="status-badge status-overdue">Overdue</span>
+        </div>
+        <div style="font-size: 2rem; font-weight: 800; color: var(--navy); margin: 1rem 0;">$5,200</div>
+        <div class="data-meta">Due: 2024-01-20</div>
+        <div class="data-actions">
+          <i class="fas fa-eye" style="color: var(--teal); cursor: pointer;"></i>
+          <i class="fas fa-download" style="color: var(--teal); cursor: pointer;"></i>
+        </div>
+      </div>
+      <div class="data-card">
+        <div class="invoice-header">
+          <div>
+            <h3>#INV-004</h3>
+            <div class="data-meta">Design Studio</div>
+          </div>
+          <span class="status-badge status-paid">Paid</span>
+        </div>
+        <div style="font-size: 2rem; font-weight: 800; color: var(--navy); margin: 1rem 0;">$890</div>
+        <div class="data-meta">Due: 2024-01-25</div>
+        <div class="data-actions">
+          <i class="fas fa-eye" style="color: var(--teal); cursor: pointer;"></i>
+          <i class="fas fa-download" style="color: var(--teal); cursor: pointer;"></i>
+        </div>
+      </div>
+      <div class="data-card">
+        <div class="invoice-header">
+          <div>
+            <h3>#INV-005</h3>
+            <div class="data-meta">Marketing Inc</div>
+          </div>
+          <span class="status-badge status-pending">Pending</span>
+        </div>
+        <div style="font-size: 2rem; font-weight: 800; color: var(--navy); margin: 1rem 0;">$3,120</div>
+        <div class="data-meta">Due: 2024-02-10</div>
+        <div class="data-actions">
+          <i class="fas fa-eye" style="color: var(--teal); cursor: pointer;"></i>
+          <i class="fas fa-download" style="color: var(--teal); cursor: pointer;"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="security-note">
+      <i class="fas fa-lock" style="color: var(--teal); margin-right: 0.5rem;"></i>
+      All transactions are encrypted end-to-end
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

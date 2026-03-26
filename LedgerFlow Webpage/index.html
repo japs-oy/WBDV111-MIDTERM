@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LedgerFlow - Secure Finance Platform</title>
+<link rel="stylesheet" href="css/index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="dashboard.html" class="logo"><img src="ledgericon.png" alt="LedgerFlow" class="logo-icon">LedgerFlow</a>
+      <ul class="nav-links">
+        <li><a href="invoices.html" class="nav-link">Invoices</a></li>
+        <li><a href="clients.html" class="nav-link">Clients</a></li>
+        <li><a href="pay.html" class="nav-link">Pay</a></li>
+        <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="main">
+    <div class="login-card">
+      <h1 class="login-title">Welcome Back</h1>
+      
+      <div class="security-badge">
+        <svg class="icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 1L3 5v6c0 5.55 3.84 9.74 9 11a9.94 9.94 0 0 0 9-9V5l-9-4z"/></svg>
+        <span>Protected with end-to-end encryption</span>
+      </div>
+
+      <form id="loginForm">
+        <div class="form-group">
+          <label class="label" for="email">Email</label>
+          <input type="email" id="email" class="input" placeholder="your.email@company.com" required>
+        </div>
+
+        <div class="form-group password-toggle">
+          <label class="label" for="password">Password</label>
+          <input type="password" id="password" class="input" placeholder="••••••••" required>
+          <button type="button" id="toggleBtn" class="toggle-btn">Show</button>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+          <div class="security-badge" style="background: none; padding: 0; font-size: 0.85rem;">
+            <i class="fas fa-shield-alt icon" style="font-size: 14px;"></i>
+            <span>2FA Enabled</span>
+          </div>
+          <a href="#" style="font-size: 0.9rem; color: var(--teal); text-decoration: none;">Forgot Password?</a>
+        </div>
+
+        <button type="submit" id="secureBtn" class="secure-btn">
+          <i class="fas fa-lock"></i> Secure Login
+        </button>
+      </form>
+
+      <div id="otpSection" class="otp-section">
+        <h3>Enter Verification Code</h3>
+        <p style="color: #6B7280; margin-bottom: 1rem;">Check your email for the 6-digit code</p>
+        <div class="otp-inputs">
+          <input type="text" class="otp-input" maxlength="1">
+          <input type="text" class="otp-input" maxlength="1">
+          <input type="text" class="otp-input" maxlength="1">
+          <input type="text" class="otp-input" maxlength="1">
+          <input type="text" class="otp-input" maxlength="1">
+          <input type="text" class="otp-input" maxlength="1">
+        </div>
+        <button onclick="verifyOTP()" class="secure-btn" style="margin-top: 1.5rem;">
+          <i class="fas fa-check-circle"></i> Verify &amp; Login
+        </button>
+      </div>
+
+      <div class="security-msg">
+        <i class="fas fa-lock icon"></i>
+        <span>Your data is secured with bank-level encryption</span>
+      </div>
+
+      <p style="margin-top: 2rem; color: #6B7280; font-size: 0.9rem;">
+        Don't have an account? <a href="#" style="color: var(--teal);">Sign up</a>
+      </p>
+    </div>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - LedgerFlow</title>
+<link rel="stylesheet" href="css/dashboard.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="dashboard.html" class="logo"><img src="ledgericon.png" alt="LedgerFlow" class="logo-icon">LedgerFlow</a>
+      <ul class="nav-links">
+        <li><a href="invoices.html" class="nav-link">Invoices</a></li>
+        <li><a href="clients.html" class="nav-link">Clients</a></li>
+        <li><a href="pay.html" class="nav-link">Pay</a></li>
+        <li><a href="dashboard.html" class="nav-link active">Dashboard</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="page-header">
+      <h1 class="page-title">Dashboard</h1>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-number">$248,450</div>
+        <div class="stat-label">Total Revenue</div>
+        <div class="stat-trend trend-up">
+          <i class="fas fa-arrow-up"></i> +12.5%
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">$15,670</div>
+        <div class="stat-label">Outstanding Invoices</div>
+        <div class="stat-trend trend-down">
+          <i class="fas fa-arrow-down"></i> -3.2%
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">89</div>
+        <div class="stat-label">Total Clients</div>
+        <div class="stat-trend trend-up">
+          <i class="fas fa-arrow-up"></i> +2
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">+$42,300</div>
+        <div class="stat-label">Monthly Cash Flow</div>
+        <div class="stat-trend trend-up">
+          <i class="fas fa-arrow-up"></i> +28.1%
+        </div>
+      </div>
+    </div>
+
+    <div class="charts-grid">
+      <div class="chart-container">
+        <h3 class="chart-title">Revenue Overview</h3>
+        <img src="barchart.jpg" alt="Revenue Chart" class="chart-image">
+      </div>
+      <div class="chart-container">
+        <h3 class="chart-title">Invoice Status</h3>
+        <img src="piechart.png" alt="Invoice Status Chart" class="chart-image">
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 2rem;">
+      <div class="activity-feed">
+        <h3 style="margin-bottom: 1.5rem;">Recent Activity</h3>
+        <div class="activity-item">
+          <div class="activity-icon" style="background: var(--success);">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <div class="activity-content">
+            <div class="activity-title">Payment received from Acme Corp</div>
+            <div class="activity-meta">2 hours ago</div>
+          </div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-icon" style="background: var(--teal);">
+            <i class="fas fa-file-invoice"></i>
+          </div>
+          <div class="activity-content">
+            <div class="activity-title">Invoice #INV-006 created</div>
+            <div class="activity-meta">1 day ago</div>
+          </div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-icon" style="background: var(--warning);">
+            <i class="fas fa-exclamation-triangle"></i>
+          </div>
+          <div class="activity-content">
+            <div class="activity-title">Invoice #INV-003 overdue</div>
+            <div class="activity-meta">3 days ago</div>
+          </div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-icon" style="background: var(--teal);">
+            <i class="fas fa-user-plus"></i>
+          </div>
+          <div class="activity-content">
+            <div class="activity-title">New client: Design Studio</div>
+            <div class="activity-meta">5 days ago</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="quick-actions">
+        <h3 style="margin-bottom: 1rem;">Quick Actions</h3>
+        <a href="invoices.html" class="quick-action">
+          <i class="fas fa-file-invoice-dollar"></i> Create Invoice
+        </a>
+        <a href="clients.html" class="quick-action">
+          <i class="fas fa-user-plus"></i> Add Client
+        </a>
+        <a href="pay.html" class="quick-action">
+          <i class="fas fa-credit-card"></i> Record Payment
+        </a>
+        <a href="#" class="quick-action">
+          <i class="fas fa-chart-bar"></i> View Reports
+        </a>
+      </div>
+    </div>
+
+    <div class="security-note">
+      <i class="fas fa-shield-alt" style="color: var(--teal); margin-right: 0.5rem;"></i>
+      All data secured with 2FA and end-to-end encryption
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

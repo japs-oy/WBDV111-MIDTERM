@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clients - LedgerFlow</title>
+<link rel="stylesheet" href="css/clients.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="index.html" class="logo"><img src="ledgericon.png" alt="LedgerFlow" class="logo-icon">LedgerFlow</a>
+      <ul class="nav-links">
+        <li><a href="invoices.html" class="nav-link">Invoices</a></li>
+        <li><a href="clients.html" class="nav-link active">Clients</a></li>
+        <li><a href="pay.html" class="nav-link">Pay</a></li>
+        <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="page-header">
+      <h1 class="page-title">Clients</h1>
+      <button class="btn-primary">
+        <i class="fas fa-user-plus"></i> Add New Client
+      </button>
+    </div>
+
+    <div class="summary-grid">
+      <div class="summary-card">
+        <div class="summary-number">89</div>
+        <div class="summary-label">Total Clients</div>
+      </div>
+      <div class="summary-card">
+        <div class="summary-number">67</div>
+        <div class="summary-label">Active Clients</div>
+      </div>
+      <div class="summary-card">
+        <div class="summary-number">$124,560</div>
+        <div class="summary-label">Outstanding</div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <input type="text" id="clientSearch" class="search-input" placeholder="Search clients...">
+      <select id="clientFilter" class="filter-select">
+        <option value="all">All Clients</option>
+        <option value="active">Active</option>
+        <option value="inactive">Inactive</option>
+      </select>
+    </div>
+
+    <div class="client-grid">
+      <div class="data-card">
+        <div class="client-header">
+          <div class="client-avatar">SJ</div>
+          <h3>Sarah Johnson</h3>
+        </div>
+        <div class="data-meta">
+          <i class="fas fa-envelope"></i> sarah@acmecorp.com
+        </div>
+        <div class="data-meta">
+          <i class="fas fa-building"></i> Acme Corp
+        </div>
+        <div style="font-size: 1.2rem; font-weight: 700; color: var(--navy); margin: 1rem 0;">Total Billed: $12,450</div>
+        <div class="data-actions">
+          <span class="status-badge status-paid">Active</span>
+          <i class="fas fa-eye" style="color: var(--teal); cursor: pointer;"></i>
+        </div>
+      </div>
+      <div class="data-card">
+        <div class="client-header">
+          <div class="client-avatar">MC</div>
+          <h3>Mike Chen</h3>
+        </div>
+        <div class="data-meta">
+          <i class="fas fa-envelope"></i> mike@techsolutions.com
+        </div>
+        <div class="data-meta">
+          <i class="fas fa-building"></i> Tech Solutions
+        </div>
+        <div style="font-size: 1.2rem; font-weight: 700; color: var(--navy); margin: 1rem 0;">Total Billed: $8,920</div>
+        <div class="data-actions">
+          <span class="status-badge status-paid">Active</span>
+          <i class="fas fa-eye" style="color: var(--teal); cursor: pointer;"></i>
+        </div>
+      </div>
+      <div class="data-card">
+        <div class="client-header">
+          <div class="client-avatar">ER</div>
+          <h3>Elena Rodriguez</h3>
+        </div>
+        <div class="data-meta">
+          <i class="fas fa-envelope"></i> elena@globaltrade.com
+        </div>
+        <div class="data-meta">
+          <i class="fas fa-building"></i> Global Trade
+        </div>
+        <div style="font-size: 1.2rem; font-weight: 700; color: var(--navy); margin: 1rem 0;">Total Billed: $23,400</div>
+        <div class="data-actions">
+          <span class="status-badge status-overdue">Inactive</span>
+          <i class="fas fa-eye" style="color: var(--teal); cursor: pointer;"></i>
+        </div>
+      </div>
+      <div class="data-card">
+        <div class="client-header">
+          <div class="client-avatar">DK</div>
+          <h3>David Kim</h3>
+        </div>
+        <div class="data-meta">
+          <i class="fas fa-envelope"></i> david@designstudio.co
+        </div>
+        <div class="data-meta">
+          <i class="fas fa-building"></i> Design Studio
+        </div>
+        <div style="font-size: 1.2rem; font-weight: 700; color: var(--navy); margin: 1rem 0;">Total Billed: $5,670</div>
+        <div class="data-actions">
+          <span class="status-badge status-paid">Active</span>
+          <i class="fas fa-eye" style="color: var(--teal); cursor: pointer;"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

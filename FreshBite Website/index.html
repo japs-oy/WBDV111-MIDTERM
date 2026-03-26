@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meal Plans App - Home</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="logo">🍽️ MealMaster</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="meals.html">Meals</a></li>
+        <li><a href="billing.html">Billing</a></li>
+        <li><a href="plans.html">Plans</a></li>
+      </ul>
+      <button class="login-btn">Login</button>
+    </div>
+  </nav>
+
+  <div class="login-overlay" id="loginOverlay">
+    <div class="login-header">
+      <h2>Login</h2>
+      <button class="close-btn">&times;</button>
+    </div>
+    <form class="login-form">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="demo@example.com" required>
+      
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Enter password" required>
+      
+      <button type="submit" class="login-submit">Sign In</button>
+      <p class="demo-text">Demo: yourusername@example.com / demo123</p>
+    </form>
+  </div>
+
+  <main>
+    <h1 class="page-title">Welcome to MealMaster</h1>
+    <p style="text-align: center; font-size: 1.3rem; margin-bottom: 3rem; color: #666;">
+      Your all-in-one solution for meal planning, nutrition tracking, and healthy billing.
+    </p>
+    
+    <div class="content-grid">
+      <div class="card">
+        <h3>🥗 Personalized Meals</h3>
+        <p>Discover delicious, nutrition-balanced meals tailored to your dietary preferences and goals.</p>
+      </div>
+      
+      <div class="card">
+        <h3>💳 Simple Billing</h3>
+        <p>Transparent pricing and easy payment management for your meal plans and subscriptions.</p>
+      </div>
+      
+      <div class="card">
+        <h3>📅 Flexible Plans</h3>
+        <p>Choose from weekly, monthly, or custom meal plans that fit your lifestyle.</p>
+      </div>
+      
+      <div class="card">
+        <h3>⚡ Quick Start</h3>
+        <p>Click Login (top-right) for demo access. (Still In-development) Non-functioning demo login available on all pages.</p>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
