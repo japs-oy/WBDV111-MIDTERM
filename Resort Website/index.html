@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luna Vista Resort</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+<a class="brand" href="index.html">
+      <img src="images/logo1.png" alt="Luna Vista Resort Logo" class="brand-logo">
+      Luna Vista Resort
+    </a>
+    <nav aria-label="Primary">
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About Luna Vista</a></li>
+        <li><a href="reservation.html">Reservation</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="hero">
+    <video
+      class="hero-video"
+      autoplay
+      muted
+      loop
+      playsinline
+      poster="images/resort.jpg"
+      aria-label="Aerial view of a tropical beach resort">
+      <source src="https://cdn.coverr.co/videos/coverr-relaxing-by-the-sea-5587/1080p.mp4" type="video/mp4">
+    </video>
+    <div class="hero-shade" aria-hidden="true"></div>
+
+    <section class="login-card" aria-label="Member login">
+      <img src="images/logo1.png" alt="Luna Vista Resort Logo" class="login-logo">
+      <h1>Escape Starts Here</h1>
+      <p>Sign in to view room rates, travel dates, and your itinerary.</p>
+      <form class="login-form" id="loginForm">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required>
+
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" placeholder="Enter password" required>
+
+        <button type="submit" a href="reservation.html">Login</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>This is Web Page Design Sample by Anjelo Serdena</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
