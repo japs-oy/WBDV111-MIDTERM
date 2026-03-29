@@ -1,0 +1,82 @@
+SwiftCart Wireframes 
+
+1. LOGIN.HTML (Split-screen)
++-----------------------------------+-----------------------------------+
+|              Hero                 |        Login Card                 |
+|  Shop smarter. Delivered faster.  |  [User Login | Admin Login tabs]  |
+|                                   |                                    |
+|                                   |  Email: [____________________]     |
+|                                   |  Password: [________________]      |
+|                                   |                                    |
+|                                   |  [Sign In as User]                |
+|                                   |                                    |
++-----------------------------------+-----------------------------------+
+
+2. INDEX.HTML (Catalog - Sidebar + Grid)
++------------------+-----------------------------------+
+| Sidebar Filters  |       Product Grid (2+ cols)       |
+|                  |                                   |
+| Categories:      |  +------------------------------+  |
+| ( ) All          |  | [Image]                       |  |
+| ( ) Electronics  |  | Product Name                  |  |
+| ( ) Clothing     |  | $XX.XX                        |  |
+| ( ) Accessories  |  | ★★★★☆                         |  |
+|                  |  | [Add to Cart]                 |  |
+|                  |  +------------------------------+  |
++------------------+-----------------------------------+
+[Search bar top]
+
+3. CART.HTML (Items List + Summary)
++------------------+-----------------------------------+
+| Cart Items List  |           Order Summary           |
+|                  |                                   |
+| [Img] Name $XX   | Subtotal: $XXX.XX                 |
+|  [+] 2 [-] [Rem] | Shipping: $9.99                   |
+|                  | Tax: $XX.XX                       |
+| [Img] Name $XX   | -----------------------------     |
+|  [+] 1 [-] [Rem] | Total: $XXX.XX                    |
+|                  |                                   |
++------------------+-----------------------------------+
+                       [Proceed to Checkout]
+
+4. CHECKOUT.HTML (Form + Summary)
++------------------+-----------------------------------+
+| Checkout Form    |           Order Summary           |
+|                  |  (same as cart)                   |
+| Shipping Info:   |                                   |
+| Name: [____]     |                                   |
+| Address: [____]  |                                   |
+| City: [____]     |                                   |
+| ZIP: [____]      |                                   |
+|                  |                                   |
+| Payment:         |                                   |
+| Card: [____]     |                                   |
+| Expiry: [__/__]  | 🔒 Secure Checkout                |
+| CVV: [___]       |                                   |
+|                  | [Place Order]                     |
++------------------+-----------------------------------+
+
+5. STATUS.HTML (Progress Tracker)
++------------------ Order Status #12345 ----------------+
+|                                                      |
+|  ✓ Ordered  →  ✓ Shipped  →  ○ Out for Deliv →  ○ Deliv |
+|                                                      |
+|  [Progress Bar: 50% filled]                          |
+|  Est. Delivery: Tomorrow                             |
+|                                                      |
+|  Order Summary: (totals)                             |
++------------------------------------------------------+
+
+6. ADMIN.HTML (Stats Grid + Tables + Form)
+| Stats Grid (8 cards: Orders, Sales, etc.) |
+|                                           |
+| Recent Orders Table | Recent Users Table  |
+| #12345 John $278 Sh | John #12345 $1245   |
+| ...                | ...                 |
+|                                           |
+| Add New Product:                          |
+| Name: [____] Price: [____] Img: [____]    |
+| [Add Product]                             |
+
+
+
