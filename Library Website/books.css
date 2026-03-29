@@ -1,0 +1,58 @@
+.loan-page{
+width:80%;
+margin:50px auto;
+text-align:center;
+}
+
+.loan-page h1{
+color:#4a3f35;
+font-size:32px;
+margin-bottom:10px;
+}
+
+.loan-desc{
+color:#6b5e4d;
+margin-bottom:40px;
+}
+
+.loan-form-box{
+width:400px;
+margin:auto;
+background:#f9f4ea;
+border:3px solid #b89b72;
+padding:30px;
+box-shadow:5px 5px 0px #b89b72;
+}
+
+.loan-form{
+display:flex;
+flex-direction:column;
+text-align:left;
+gap:15px;
+}
+
+.loan-form label{
+color:#4a3f35;
+font-weight:600;
+}
+
+.loan-form input{
+padding:10px;
+border:2px solid #b89b72;
+border-radius:5px;
+font-size:14px;
+}
+
+.loan-form button{
+margin-top:10px;
+padding:12px;
+border:2px solid #b89b72;
+background:#f9f4ea;
+cursor:pointer;
+transition:0.3s;
+}
+
+.loan-form button:hover{
+background:#b89b72;
+color:white;
+}
