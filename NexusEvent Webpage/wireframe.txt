@@ -1,0 +1,89 @@
+NEXUS EVENTS COMPLETE ASCII WIREFRAME (ALL PAGES)
+==================================================
+
+HEADER (All Pages):
++------------------------------+
+| NEXUS EVENTS | Home Events   |
+| Tickets Venue Contact Admin  |
+| [Party: OFF]                 |
++------------------------------+
+
+HOMEPAGE (index.html):
++------------------------------+---------------------+
+| HERO TEXT:                   | HERO CARD:          |
+| Where live energy meets...   | +--------------+    |
+| [EXPLORE EVENTS] [TICKETS]   | | ALL ACCESS   |    |
+|                             | | Pixel Parade |    |
+| MEGA BANNER: Plan Tickets    | | Date/Venue   |    |
+| [PLAN TICKETS]               | | Tags         |    |
+|                             | | Details      |    |
+| STATS: 24+ 8K 3 100%         | | [RESERVE] [CHECK TICKET]|
+|                             | +--------------+    |
++------------------------------+ QR MODAL: [SVG] ✓  |
+ FEATURED EVENTS:              | Progress: [==== ]  |
+ [See Details] [See Details]   | Purchased!         |
+ [See Details]                 +---------------------+
+
+ADMIN LOGIN (admin-login.html):
++------------------------------+----------------+
+| Admin Control Room           | LOGIN CARD     |
+| Authorized team only...      | +-----------+   |
+| Tags: Events Tickets Ops     | | Login     |   |
+| Inbox                        | | ID [____] |   |
+|                              | | Pass[____]|   |
+|                              | | [DASHBOARD] |  |
+|                              | | [CHECK TKT]  | |
+|                              | +-----------+   |
++------------------------------+----------------+
+                                 QR: [SVG QR] Valid
+                                 [CHECKOUT] Success ✓
+
+TICKETS (tickets.html):
++--------------------------------+
+| Tickets & Access               |
+| Cards: Starter Popular VIP     |
+|                                |
+| TICKET BUILDER:                |
+| Pulse Pass [$45] [ - 0 + ]     |
+| Glow Pass [$85] [ - 0 + ]      |
+| Orbit [$140] [ - 0 + ]         |
+| Total: $0 [CHECKOUT]           |
+|                                |
+| FAQ Accordion                  |
++--------------------------------+
+ (QR in modal)
+
+EVENTS (events.html):
++--------------------------------+
+| Events Ticker                  |
+| Featured Events Grid           |
+| [Filter: All Live Visual]      |
+| Card [See Details] x6          |
+|                                |
+| Check Ticket button (similar)  |
++--------------------------------+
+
+VENUE (venue.html):
++--------------------------------+
+| Venue Map SVG                  |
+| Interactive zones              |
+| [Reserve Zone A] [Zone B]      |
+|                                |
+| Seating chart [Select Seats]   |
++--------------------------------+
+
+CONTACT (contact.html):
++--------------------------------+
+| Contact Form                   |
+| Name Email Message             |
+| [SUBMIT FORM]                  |
+| Social links                   |
++--------------------------------+
+
+GLOBAL MODAL FLOW:
+Check Ticket → 
+  ├─ QR Scanner Mock
+  ├─ Validated ✓
+  └─ [Proceed Checkout] → Success Animation ✓
+
+COLOR KEY: Buttons=[GOLD] | Cards=Dark w/ glow | Responsive stack mobile.

@@ -1,0 +1,25 @@
+
+HOMEPAGE (index.html)
+├── Hero Section
+│   ├── Explore Events
+│   ├── Get Tickets
+│   └── Mega Banner
+├── Hero Card
+│   ├── Reserve Seats 
+│   └── Check Ticket 
+└── Featured Events
+    └── See Details
+
+ADMIN LOGIN 
+├── Login Form
+│   ├── Enter Dashboard
+│   └── Check Ticket for Purchase
+└── Party Toggle 
+
+TICKETS 
+├── Ticket Builder
+│   ├── Qty - / + 
+│   └── Filter buttons 
+├── Modal Flows
+│   └── Checkout buttons
+
