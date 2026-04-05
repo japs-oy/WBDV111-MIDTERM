@@ -1,0 +1,785 @@
+:root {
+    --primary-green: #0f9f6e;
+    --secondary-green: #34d399;
+    --accent-green: #d1fae5;
+    --ink: #16302b;
+    --muted-text: #5f6f6a;
+    --light-gray: #f5f7f4;
+    --medium-gray: #d7dfda;
+    --white: #ffffff;
+    --shadow: 0 10px 30px rgba(18, 38, 32, 0.08);
+    --shadow-lg: 0 18px 45px rgba(18, 38, 32, 0.14);
+    --border-radius: 18px;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--muted-text);
+    background: var(--light-gray);
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(14px);
+    box-shadow: var(--shadow);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 72px;
+}
+
+.nav-logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--primary-green);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+    align-items: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--ink);
+    font-weight: 600;
+    padding: 10px 0;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition);
+}
+
+.nav-link:hover,
+.nav-link:focus-visible {
+    color: var(--primary-green);
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-green);
+    transition: var(--transition);
+}
+
+.nav-link:hover::after,
+.nav-link:focus-visible::after {
+    width: 100%;
+}
+
+.simple-nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.bar {
+    width: 26px;
+    height: 3px;
+    background: var(--ink);
+    transition: var(--transition);
+}
+
+.hero {
+    margin-top: 72px;
+    padding: 120px 0 96px;
+    background:
+        radial-gradient(circle at top left, rgba(255, 255, 255, 0.22), transparent 35%),
+        linear-gradient(135deg, #0f9f6e 0%, #47c8a5 100%);
+    color: var(--white);
+    text-align: center;
+}
+
+.hero-container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.eyebrow,
+.section-kicker {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 5vw, 4.25rem);
+    line-height: 1.1;
+    margin: 1rem 0 1.25rem;
+}
+
+.hero-subtitle {
+    font-size: 1.15rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.cta-button,
+.secondary-button,
+.login-btn,
+.logout-btn,
+.grade-btn,
+.action-btn,
+.status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 0;
+    border-radius: 999px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 700;
+    transition: var(--transition);
+}
+
+.cta-button,
+.login-btn {
+    background: var(--white);
+    color: var(--primary-green);
+    padding: 15px 26px;
+    box-shadow: var(--shadow-lg);
+}
+
+.secondary-button {
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--white);
+    padding: 15px 26px;
+    border: 1px solid rgba(255, 255, 255, 0.32);
+}
+
+.cta-button:hover,
+.secondary-button:hover,
+.login-btn:hover,
+.logout-btn:hover,
+.grade-btn:hover,
+.action-btn:hover,
+.status.available:hover {
+    transform: translateY(-2px);
+}
+
+.highlights,
+.courses,
+.dashboard-section {
+    padding: 88px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-heading h2 {
+    color: var(--ink);
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-top: 0.75rem;
+}
+
+.highlight-grid,
+.courses-grid,
+.dashboard-grid {
+    display: grid;
+    gap: 24px;
+}
+
+.highlight-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.highlight-card,
+.course-card,
+.dashboard-card,
+.stat-card,
+.login-card,
+.login-copy {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.highlight-card {
+    padding: 2rem;
+}
+
+.highlight-card i {
+    color: var(--primary-green);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.highlight-card h3,
+.course-card h3,
+.dashboard-card h3,
+.login-card h2,
+.register-card h2,
+.login-copy h1 {
+    color: var(--ink);
+}
+
+.dashboard-section {
+    background: #eef7f2;
+}
+
+.dashboard-section[hidden] {
+    display: none;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.dashboard-header h2 {
+    color: var(--primary-green);
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.dashboard-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.dashboard-card {
+    padding: 2rem;
+}
+
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    padding: 2rem;
+    text-align: center;
+}
+
+.stat-card i,
+.stat-number,
+.course-icon,
+.card-icon i {
+    color: var(--primary-green);
+}
+
+.stat-card i,
+.course-icon {
+    font-size: 2.6rem;
+    margin-bottom: 1rem;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+
+.enrolled-item,
+.grade-item,
+.users-card li,
+.classes-card li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--medium-gray);
+}
+
+.enrolled-item:last-child,
+.grade-item:last-child,
+.users-card li:last-child,
+.classes-card li:last-child {
+    border-bottom: 0;
+}
+
+.enrolled-item i,
+.classes-card i {
+    color: var(--primary-green);
+    margin-right: 10px;
+}
+
+.progress-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.progress-item {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 14px;
+    align-items: center;
+}
+
+.progress-bar {
+    height: 10px;
+    background: var(--medium-gray);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-green), var(--secondary-green));
+}
+
+.dashboard-empty {
+    padding: 1rem 0;
+    color: var(--muted-text);
+}
+
+.logout-btn {
+    background: var(--ink);
+    color: var(--white);
+    padding: 12px 22px;
+}
+
+.grade-btn,
+.action-btn {
+    background: var(--accent-green);
+    color: var(--primary-green);
+    padding: 10px 14px;
+}
+
+.action-btn {
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.courses {
+    background: var(--light-gray);
+}
+
+.courses-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.course-card {
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.course-card::before,
+.login-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-green), var(--secondary-green));
+}
+
+.course-card p,
+.highlight-card p,
+.login-card p,
+.login-copy p,
+.footer-section p,
+.footer-section li {
+    color: var(--muted-text);
+}
+
+.status {
+    margin-top: 1.25rem;
+    padding: 11px 18px;
+}
+
+.status.available {
+    background: var(--accent-green);
+    color: var(--primary-green);
+}
+
+.status.enrolled {
+    background: var(--primary-green);
+    color: var(--white);
+    cursor: default;
+}
+
+.login-main {
+    min-height: 100vh;
+    padding: 118px 20px 48px;
+    background:
+        radial-gradient(circle at top right, rgba(52, 211, 153, 0.22), transparent 28%),
+        linear-gradient(180deg, #f6fffb 0%, #e7f5ef 100%);
+}
+
+.login-shell {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(260px, 360px) 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+.login-copy {
+    padding: 2rem;
+    position: sticky;
+    top: 96px;
+}
+
+.login-copy h1 {
+    font-size: clamp(2rem, 3.2vw, 2.8rem);
+    line-height: 1.15;
+    margin: 0.75rem 0 1rem;
+}
+
+.login-hints {
+    list-style: none;
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.login-hints i {
+    color: var(--primary-green);
+    margin-right: 10px;
+}
+
+.helper-links {
+    margin-top: 1.25rem;
+}
+
+.inline-link,
+.form-note a {
+    color: var(--primary-green);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.login-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+}
+
+.login-card {
+    padding: 2.2rem;
+    position: relative;
+    transition: var(--transition);
+    opacity: 0.72;
+    transform: scale(0.98);
+}
+
+.login-card.active,
+.login-card:hover,
+.login-card:focus-within {
+    opacity: 1;
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.input-group label {
+    display: inline-block;
+    margin-bottom: 0.45rem;
+    color: var(--ink);
+    font-weight: 600;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid var(--medium-gray);
+    background: #fbfdfb;
+    border-radius: 14px;
+    padding: 0 14px;
+    transition: var(--transition);
+}
+
+.input-wrapper:focus-within {
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 4px rgba(15, 159, 110, 0.12);
+}
+
+.input-wrapper i {
+    color: var(--primary-green);
+}
+
+.input-wrapper input {
+    width: 100%;
+    border: 0;
+    background: transparent;
+    padding: 14px 0;
+    color: var(--ink);
+    outline: none;
+}
+
+.login-btn.large {
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.demo-info {
+    margin-top: 1rem;
+}
+
+.register-main {
+    min-height: 100vh;
+    padding: 118px 20px 48px;
+    background:
+        radial-gradient(circle at top left, rgba(15, 159, 110, 0.18), transparent 26%),
+        linear-gradient(180deg, #f7fff9 0%, #e9f7ef 100%);
+}
+
+.register-shell {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(260px, 360px) minmax(320px, 540px);
+    gap: 24px;
+    justify-content: center;
+    align-items: start;
+}
+
+.register-card {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-lg);
+    padding: 2.2rem;
+    position: relative;
+}
+
+.register-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-green), var(--secondary-green));
+}
+
+.register-form {
+    margin-top: 1.5rem;
+}
+
+.register-card p {
+    color: var(--muted-text);
+}
+
+.form-note {
+    margin-top: 1rem;
+}
+
+.course-access-note {
+    margin-top: 1.25rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--muted-text);
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.course-access-note i {
+    color: var(--primary-green);
+}
+
+.status[hidden],
+.course-access-note[hidden] {
+    display: none;
+}
+
+.login-nav.simple-nav .nav-container {
+    justify-content: space-between;
+}
+
+.footer {
+    background: #142520;
+    color: var(--white);
+    padding: 3rem 0 1.5rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3,
+.footer-section h4,
+.footer-section a {
+    color: var(--white);
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section a {
+    text-decoration: none;
+}
+
+.footer-bottom {
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 900px) {
+    .login-shell {
+        grid-template-columns: 1fr;
+    }
+
+    .register-shell {
+        grid-template-columns: 1fr;
+    }
+
+    .login-copy {
+        position: static;
+    }
+}
+
+@media (max-width: 768px) {
+    .simple-nav-links {
+        gap: 16px;
+    }
+
+    .nav-menu {
+        position: fixed;
+        inset: 72px 0 auto;
+        left: -100%;
+        flex-direction: column;
+        background: var(--white);
+        width: 100%;
+        text-align: center;
+        box-shadow: var(--shadow);
+        padding: 1.5rem 0 2rem;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .hero {
+        padding: 96px 0 72px;
+    }
+
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .progress-item {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 560px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .simple-nav-links {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    .login-card,
+    .dashboard-card,
+    .highlight-card,
+    .course-card,
+    .login-copy,
+    .stat-card,
+    .register-card {
+        padding: 1.5rem;
+    }
+}

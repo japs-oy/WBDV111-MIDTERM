@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration - ScholarPortal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar login-nav simple-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>ScholarPortal</span>
+            </a>
+            <div class="simple-nav-links">
+                <a href="login.html" class="nav-link"><i class="fas fa-sign-in-alt"></i> Login</a>
+                <a href="index.html#courses" class="nav-link"><i class="fas fa-book"></i> Courses</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="register-main">
+        <section class="register-shell">
+            <div class="login-copy">
+                <p class="section-kicker">Student Registration</p>
+                <h1>Create your student account</h1>
+                <p>Register once, sign in as a student, and you'll be the only role that can enroll in courses.</p>
+                <ul class="login-hints">
+                    <li><i class="fas fa-id-card"></i> Use a unique student ID like <strong>STU2001</strong></li>
+                    <li><i class="fas fa-lock"></i> Pick a password you can remember for future logins</li>
+                    <li><i class="fas fa-check-circle"></i> After registration, you'll be signed in automatically</li>
+                </ul>
+                <div class="helper-links">
+                    <a href="login.html" class="inline-link"><i class="fas fa-arrow-left"></i> Back to login</a>
+                </div>
+            </div>
+
+            <article class="register-card">
+                <div class="card-icon">
+                    <i class="fas fa-user-plus fa-3x"></i>
+                </div>
+                <h2>Student Sign Up</h2>
+                <p>Fill in your details to create a local student account for this portal.</p>
+
+                <form class="register-form">
+                    <div class="input-group">
+                        <label for="registerName">Full Name</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="registerName" placeholder="e.g. Alex Rivera" required>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="registerEmail">Email</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="registerEmail" placeholder="e.g. alex@student.edu" required>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="registerStudentId">Student ID</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-id-badge"></i>
+                            <input type="text" id="registerStudentId" placeholder="e.g. STU2001" required>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="registerPassword">Password</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="registerPassword" placeholder="Create a password" required>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="registerConfirmPassword">Confirm Password</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-check"></i>
+                            <input type="password" id="registerConfirmPassword" placeholder="Confirm your password" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="login-btn large">
+                        <i class="fas fa-user-check"></i> Create Student Account
+                    </button>
+                </form>
+
+                <p class="form-note">Already registered? <a href="login.html">Sign in here</a>.</p>
+            </article>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

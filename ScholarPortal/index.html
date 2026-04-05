@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScholarPortal - Empowering Your Learning Journey</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>ScholarPortal</span>
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#highlights" class="nav-link"><i class="fas fa-star"></i> Highlights</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#courses" class="nav-link"><i class="fas fa-book"></i> Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a href="login.html" class="nav-link"><i class="fas fa-sign-in-alt"></i> Login</a>
+                </li>
+                <li class="nav-item">
+                    <a href="register.html" class="nav-link"><i class="fas fa-user-plus"></i> Register</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#student-dashboard" class="nav-link" id="dashboardNavLink"><i class="fas fa-user-graduate"></i> Dashboard</a>
+                </li>
+            </ul>
+            <button class="nav-toggle" id="mobile-menu" type="button" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="hero" id="hero">
+        <div class="hero-container">
+            <p class="eyebrow">ScholarPortal</p>
+            <h1 class="hero-title">Learning, teaching, and administration in one simple portal</h1>
+            <p class="hero-subtitle">Explore courses, sign in by role, and jump straight into student, teacher, or admin tools without a messy interface.</p>
+            <div class="hero-actions">
+                <a href="login.html" class="cta-button">
+                    <i class="fas fa-rocket"></i> Open Login
+                </a>
+                <a href="register.html" class="secondary-button">
+                    <i class="fas fa-user-plus"></i> Student Register
+                </a>
+                <a href="#courses" class="secondary-button">
+                    <i class="fas fa-compass"></i> Browse Courses
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="highlights" id="highlights">
+        <div class="container">
+            <div class="section-heading">
+                <p class="section-kicker">Why it works</p>
+                <h2>Built for every part of the campus workflow</h2>
+            </div>
+            <div class="highlight-grid">
+                <article class="highlight-card">
+                    <i class="fas fa-user-graduate"></i>
+                    <h3>Students</h3>
+                    <p>Track enrolled courses, keep an eye on progress, and return to the dashboard after login.</p>
+                </article>
+                <article class="highlight-card">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <h3>Teachers</h3>
+                    <p>Review class lists and handle grading actions from a cleaner dashboard layout.</p>
+                </article>
+                <article class="highlight-card">
+                    <i class="fas fa-user-shield"></i>
+                    <h3>Admins</h3>
+                    <p>Monitor users, courses, and quick actions without broken sections or duplicate scripts.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="dashboard-section" id="student-dashboard" hidden>
+        <div class="container">
+            <div class="dashboard-header">
+                <h2><i class="fas fa-user-graduate"></i> Student Dashboard</h2>
+                <button class="logout-btn" id="studentLogout" type="button"><i class="fas fa-sign-out-alt"></i> Logout</button>
+            </div>
+            <div class="dashboard-grid">
+                <div class="dashboard-card enrolled-courses">
+                    <h3>Enrolled Courses</h3>
+                    <div id="studentEnrolledCourses"></div>
+                </div>
+                <div class="dashboard-card progress-card">
+                    <h3>Progress Overview</h3>
+                    <div class="progress-bars">
+                        <div class="progress-item">
+                            <span>Web Development</span>
+                            <div class="progress-bar"><div class="progress-fill" style="width: 75%;"></div></div>
+                        </div>
+                        <div class="progress-item">
+                            <span>Data Science</span>
+                            <div class="progress-bar"><div class="progress-fill" style="width: 40%;"></div></div>
+                        </div>
+                        <div class="progress-item">
+                            <span>Cloud Computing</span>
+                            <div class="progress-bar"><div class="progress-fill" style="width: 60%;"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="dashboard-section" id="teacher-dashboard" hidden>
+        <div class="container">
+            <div class="dashboard-header">
+                <h2><i class="fas fa-chalkboard-teacher"></i> Teacher Dashboard</h2>
+                <button class="logout-btn" id="teacherLogout" type="button"><i class="fas fa-sign-out-alt"></i> Logout</button>
+            </div>
+            <div class="dashboard-grid">
+                <div class="dashboard-card classes-card">
+                    <h3>My Classes</h3>
+                    <ul>
+                        <li><i class="fas fa-users"></i> Web Development Fundamentals (45 students)</li>
+                        <li><i class="fas fa-users"></i> Data Science Essentials (32 students)</li>
+                    </ul>
+                </div>
+                <div class="dashboard-card grading-card">
+                    <h3>Pending Grades</h3>
+                    <div class="grade-list">
+                        <div class="grade-item">John Doe - Assignment 1 <button class="grade-btn" type="button">Grade</button></div>
+                        <div class="grade-item">Jane Smith - Quiz 2 <button class="grade-btn" type="button">Grade</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="dashboard-section" id="admin-dashboard" hidden>
+        <div class="container">
+            <div class="dashboard-header">
+                <h2><i class="fas fa-user-shield"></i> Admin Dashboard</h2>
+                <button class="logout-btn" id="adminLogout" type="button"><i class="fas fa-sign-out-alt"></i> Logout</button>
+            </div>
+            <div class="dashboard-stats">
+                <div class="stat-card">
+                    <i class="fas fa-users"></i>
+                    <div><span class="stat-number">1,247</span><span>Students</span></div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-user-tie"></i>
+                    <div><span class="stat-number">56</span><span>Teachers</span></div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-book"></i>
+                    <div><span class="stat-number">24</span><span>Courses</span></div>
+                </div>
+            </div>
+            <div class="dashboard-grid">
+                <div class="dashboard-card users-card">
+                    <h3>Recent Users</h3>
+                    <ul>
+                        <li>STU123456 - Enrolled</li>
+                        <li>TEACH1 - Login</li>
+                        <li>ADMIN1 - Updated course catalog</li>
+                    </ul>
+                </div>
+                <div class="dashboard-card actions-card">
+                    <h3>Quick Actions</h3>
+                    <button class="action-btn" type="button"><i class="fas fa-plus"></i> Add Course</button>
+                    <button class="action-btn" type="button"><i class="fas fa-users-cog"></i> Manage Users</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="courses" id="courses">
+        <div class="container">
+            <div class="section-heading">
+                <p class="section-kicker">Course Catalog</p>
+                <h2>Available courses</h2>
+            </div>
+            <div class="courses-grid" id="coursesGrid">
+                <div class="course-card">
+                    <i class="fas fa-laptop-code course-icon"></i>
+                    <h3>Web Development Fundamentals</h3>
+                    <p>Learn HTML, CSS, and JavaScript through practical projects.</p>
+                    <button class="status available" type="button">Enroll</button>
+                </div>
+                <div class="course-card">
+                    <i class="fas fa-chart-line course-icon"></i>
+                    <h3>Data Science Essentials</h3>
+                    <p>Build a foundation in Python, analytics, and beginner machine learning.</p>
+                    <button class="status available" type="button">Enroll</button>
+                </div>
+                <div class="course-card">
+                    <i class="fas fa-brain course-icon"></i>
+                    <h3>AI &amp; Machine Learning</h3>
+                    <p>Understand models, neural networks, and AI workflows.</p>
+                    <button class="status available" type="button">Enroll</button>
+                </div>
+                <div class="course-card">
+                    <i class="fas fa-database course-icon"></i>
+                    <h3>Database Systems</h3>
+                    <p>Design efficient relational and NoSQL data structures.</p>
+                    <button class="status available" type="button">Enroll</button>
+                </div>
+                <div class="course-card">
+                    <i class="fas fa-cloud course-icon"></i>
+                    <h3>Cloud Computing</h3>
+                    <p>Explore AWS, Azure, deployment, and cloud service basics.</p>
+                    <button class="status enrolled" type="button">Enrolled</button>
+                </div>
+                <div class="course-card">
+                    <i class="fas fa-mobile-alt course-icon"></i>
+                    <h3>Mobile App Development</h3>
+                    <p>Create cross-platform apps with modern mobile frameworks.</p>
+                    <button class="status available" type="button">Enroll</button>
+                </div>
+                <div class="course-card">
+                    <i class="fas fa-code course-icon"></i>
+                    <h3>Advanced Algorithms</h3>
+                    <p>Dive into graph theory, optimization, and dynamic programming.</p>
+                    <button class="status available" type="button">Enroll</button>
+                </div>
+                <div class="course-card">
+                    <i class="fas fa-shield-alt course-icon"></i>
+                    <h3>Cybersecurity Fundamentals</h3>
+                    <p>Learn core concepts in security, encryption, and risk awareness.</p>
+                    <button class="status available" type="button">Enroll</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-graduation-cap"></i> ScholarPortal</h3>
+                    <p>Your gateway to academic success.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-envelope"></i> support@scholarportal.edu</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="login.html">Role Login</a></li>
+                        <li><a href="register.html">Student Register</a></li>
+                        <li><a href="#courses">Browse Courses</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ScholarPortal. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

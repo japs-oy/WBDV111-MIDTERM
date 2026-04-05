@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - ScholarPortal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar login-nav simple-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>ScholarPortal</span>
+            </a>
+            <div class="simple-nav-links">
+                <a href="register.html" class="nav-link"><i class="fas fa-user-plus"></i> Register</a>
+                <a href="index.html#courses" class="nav-link"><i class="fas fa-book"></i> Courses</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="login-main">
+        <section class="login-shell">
+            <div class="login-copy">
+                <p class="section-kicker">Secure Access</p>
+                <h1>Choose your portal and sign in</h1>
+                <p>Each role opens a tailored dashboard. Teachers and admins use the demo password <strong>password</strong>, while students can use either the demo account or a registered student account.</p>
+                <div class="helper-links">
+                    <a href="register.html" class="inline-link"><i class="fas fa-user-plus"></i> New student? Register here</a>
+                </div>
+                <ul class="login-hints">
+                    <li><i class="fas fa-user-graduate"></i> Student demo: <strong>STU123</strong></li>
+                    <li><i class="fas fa-chalkboard-teacher"></i> Teacher demo: <strong>TEACH1</strong></li>
+                    <li><i class="fas fa-user-shield"></i> Admin demo: <strong>ADMIN1</strong></li>
+                </ul>
+            </div>
+
+            <div class="login-grid">
+                <article class="login-card student-card active" data-role="student">
+                    <div class="card-icon">
+                        <i class="fas fa-user-graduate fa-3x"></i>
+                    </div>
+                    <h2>Student Portal</h2>
+                    <p>Access courses and track your learning progress.</p>
+                    <form class="login-form" data-role="student">
+                        <div class="input-group">
+                            <label for="studentId">Student ID</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-id-badge"></i>
+                                <input type="text" id="studentId" placeholder="e.g. STU123" required>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="studentPass">Password</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" id="studentPass" placeholder="Enter password" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="login-btn large">
+                            <i class="fas fa-sign-in-alt"></i> Login as Student
+                        </button>
+                    </form>
+                    <div class="demo-info">
+                        <small>Demo: STU123 / password or use your registered student account</small>
+                    </div>
+                </article>
+
+                <article class="login-card teacher-card" data-role="teacher">
+                    <div class="card-icon">
+                        <i class="fas fa-chalkboard-teacher fa-3x"></i>
+                    </div>
+                    <h2>Teacher Portal</h2>
+                    <p>Manage classes, grade assignments, and track student progress.</p>
+                    <form class="login-form" data-role="teacher">
+                        <div class="input-group">
+                            <label for="teacherId">Teacher ID</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-id-badge"></i>
+                                <input type="text" id="teacherId" placeholder="e.g. TEACH1" required>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="teacherPass">Password</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" id="teacherPass" placeholder="Enter password" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="login-btn large">
+                            <i class="fas fa-sign-in-alt"></i> Login as Teacher
+                        </button>
+                    </form>
+                    <div class="demo-info">
+                        <small>Demo: TEACH1 / password</small>
+                    </div>
+                </article>
+
+                <article class="login-card admin-card" data-role="admin">
+                    <div class="card-icon">
+                        <i class="fas fa-user-shield fa-3x"></i>
+                    </div>
+                    <h2>Admin Portal</h2>
+                    <p>Review platform activity, users, and quick administrative actions.</p>
+                    <form class="login-form" data-role="admin">
+                        <div class="input-group">
+                            <label for="adminId">Admin ID</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-id-badge"></i>
+                                <input type="text" id="adminId" placeholder="e.g. ADMIN1" required>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="adminPass">Password</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" id="adminPass" placeholder="Enter password" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="login-btn large">
+                            <i class="fas fa-sign-in-alt"></i> Login as Admin
+                        </button>
+                    </form>
+                    <div class="demo-info">
+                        <small>Demo: ADMIN1 / password</small>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
