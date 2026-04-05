@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HealthSync Login</title>
+  <link rel="stylesheet" href="portal.css">
+</head>
+<body data-page="login">
+  <div class="page-bg" aria-hidden="true">
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
+  </div>
+
+  <header class="portal-header">
+    <div class="brand-block">
+      <div class="brand-mark">HS</div>
+      <div>
+        <p class="eyebrow">Secure Portal</p>
+        <h1>HealthSync Clinic</h1>
+      </div>
+    </div>
+      <nav class="header-nav">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="locations.html">Locations</a>
+      <a class="nav-link" href="contact.html">Contact</a>
+      <button class="logout-button" type="button" data-logout>Clear Session</button>
+    </nav>
+  </header>
+
+  <main class="portal-shell">
+    <section class="welcome-card">
+      <div class="welcome-copy">
+        <p class="eyebrow">Role-Based Access</p>
+        <h2>Login with a demo account to open the matching dashboard.</h2>
+        <p class="support-copy">
+          This prototype uses four predefined accounts: <strong>Default</strong>, <strong>Admin</strong>, <strong>Staff</strong>, and <strong>User</strong>. Each credential pair routes to its own dashboard file.
+        </p>
+        <div class="helper-row">
+          <a class="action-link" href="index.html#wizard">Open Appointment Wizard</a>
+          <a class="ghost-link" href="index.html">Return to Home</a>
+        </div>
+      </div>
+
+      <div class="welcome-side">
+        <div class="mini-stat">
+          <span>Accounts Ready</span>
+          <strong>4</strong>
+        </div>
+        <div class="mini-stat">
+          <span>Separate Dashboard Files</span>
+          <strong>Enabled</strong>
+        </div>
+        <div class="mini-stat">
+          <span>Session Handling</span>
+          <strong>Local Prototype</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="login-layout">
+      <article class="login-panel">
+        <p class="eyebrow">Sign In</p>
+        <h2>Enter a username and password.</h2>
+        <p class="helper-text">Use the credentials below or tap a card to auto-fill the form.</p>
+
+        <form id="loginForm">
+          <div class="field-group">
+            <label for="username">Username</label>
+            <input id="username" name="username" type="text" placeholder="Enter username" autocomplete="username">
+          </div>
+
+          <div class="field-group">
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" placeholder="Enter password" autocomplete="current-password">
+          </div>
+
+          <button class="submit-button" type="submit">Login to Dashboard</button>
+          <p id="loginStatus" class="status-note" data-state="idle"></p>
+        </form>
+
+        <div class="helper-row">
+          <p id="currentSession" class="helper-text" hidden></p>
+          <button id="continueSession" class="ghost-link" type="button" hidden>Continue Current Session</button>
+        </div>
+      </article>
+
+      <section>
+        <p class="eyebrow">Demo Credentials</p>
+        <div id="accountGrid" class="account-grid"></div>
+      </section>
+    </section>
+  </main>
+
+  <script src="state.js"></script>
+  <script src="auth.js"></script>
+</body>
+</html>
