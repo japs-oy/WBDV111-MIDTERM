@@ -1,0 +1,55 @@
+================================================================================
+                        NEXUS EVENTS - WEBSITE SITEMAP
+================================================================================
+
+NEXUS EVENTS
+│
+├── HOME
+│   ├── Hero Section
+│   ├── Stats Section
+│   ├── Why Traverse Nexus
+│   ├── Featured Dimensions
+│   ├── Testimonials
+│   ├── Newsletter Signup
+│   ├── Design Your Adventure
+│   └── Account Access
+│
+├── EVENTS
+│   ├── Event Listings
+│   ├── Event Details
+│   └── Filter & Search
+│
+├── TICKETS
+│   ├── Ticket Selection
+│   ├── Pricing
+│   └── Checkout
+│
+├── VENUE
+│   ├── Venue Map
+│   ├── Venue Information
+│   └── Facilities
+│
+├── CONTACT
+│   ├── Contact Form
+│   └── Support
+│
+└── ADMIN
+    ├── Admin Login
+    └── Admin Dashboard
+
+
+================================================================================
+NAVIGATION BUTTONS:
+================================================================================
+
+Main Navigation Bar:
+  • Home
+  • Events
+  • Tickets
+  • Venue
+  • Contact
+  • Admin
+  • Party Mode Toggle
+
+
+================================================================================
