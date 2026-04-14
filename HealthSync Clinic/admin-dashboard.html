@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | HealthSync Clinic</title>
+  <link rel="stylesheet" href="portal.css">
+</head>
+<body data-protected-role="admin">
+  <div class="page-bg" aria-hidden="true">
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
+  </div>
+
+  <header class="portal-header">
+    <div class="brand-block">
+      <div class="brand-mark">HS</div>
+      <div>
+        <p class="eyebrow">Admin Dashboard</p>
+        <h1>HealthSync Clinic</h1>
+      </div>
+    </div>
+    <nav class="header-nav">
+      <a class="nav-link" href="index.html">Public Website</a>
+      <a class="nav-link" href="login.html">Switch Account</a>
+      <button class="notification-button" type="button" aria-label="Admin notifications">
+        Notifications
+        <span class="notification-badge">4</span>
+      </button>
+      <button class="logout-button" type="button" data-logout>Log Out</button>
+    </nav>
+  </header>
+
+  <main class="portal-shell">
+    <section class="portal-hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Branch Operations</p>
+        <h2>Hello, <span data-auth-name></span>.</h2>
+        <p>
+          You are logged in as <strong><span data-auth-role></span></strong>. This admin view focuses on branch operations, doctor schedule visibility, and appointment approvals.
+        </p>
+      </div>
+
+      <div class="hero-side">
+        <div class="mini-stat">
+          <span>Primary Branch</span>
+          <strong>Central</strong>
+        </div>
+        <div class="mini-stat">
+          <span>Pending Reviews</span>
+          <strong>8</strong>
+        </div>
+        <div class="mini-stat">
+          <span>Staff Online</span>
+          <strong>12</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="metric-grid" id="adminMetrics">
+      <!-- Dynamic metrics populated by JS -->
+    </section>
+
+    <section class="panel notification-center">
+      <p class="eyebrow">Notification Center</p>
+      <div class="notification-header">
+        <h3>Admin alerts requiring attention</h3>
+        <span class="notification-summary">4 unread</span>
+      </div>
+<div class="notification-list" id="adminNotifications">
+        <!-- Dynamic notifications -->
+      </div>
+    </section>
+
+    <section class="panel-grid">
+      <article class="panel">
+        <p class="eyebrow">Approval Queue</p>
+        <h3>Pending Appointments</h3>
+        <div class="approval-queue" id="approvalQueue">
+          <!-- Dynamic table -->
+        </div>
+      </article>
+
+      <article class="panel">
+        <p class="eyebrow">Latest Wizard Booking</p>
+        <h3>Newest patient request</h3>
+        <div data-latest-booking></div>
+      </article>
+
+      <article class="panel">
+        <p class="eyebrow">Daily Snapshot</p>
+        <h3>Operational notes</h3>
+        <div class="info-list">
+          <div class="list-item">
+            <strong>Doctor Coverage</strong>
+            <small>North and West branches</small>
+            <p>Orthopedics is fully covered. Dermatology needs one extra afternoon slot.</p>
+          </div>
+          <div class="list-item">
+            <strong>Front Desk Escalations</strong>
+            <small>2 active items</small>
+            <p>One insurance mismatch and one duplicate booking require manual review.</p>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="state.js"></script>
+  <script src="auth.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const metricsGrid = document.getElementById('adminMetrics');
+      const notifsList = document.getElementById('adminNotifications');
+      const queueContainer = document.getElementById('approvalQueue');
+      if (!window.HealthSyncState) return;
+
+      // Metrics
+      function renderMetrics() {
+        const metrics = window.HealthSyncState.getMetrics('admin');
+        metricsGrid.innerHTML = `
+          <article class="metric-card">
+            <span>Total Appointments</span>
+            <strong>${metrics.totalAppointments}</strong>
+            <p>Live count from clinic database.</p>
+          </article>
+          <article class="metric-card">
+            <span>Pending</span>
+            <strong>${metrics.pending}</strong>
+            <p>Approval queue ready for review.</p>
+          </article>
+          <article class="metric-card">
+            <span>Completed</span>
+            <strong>${metrics.completed}</strong>
+            <p>Today's successful visits.</p>
+          </article>
+          <article class="metric-card">
+            <span>No-Shows</span>
+            <strong>${metrics.noShows}</strong>
+            <p>Cancellations and missed appointments.</p>
+          </article>
+        `;
+      }
+
+      // Notifications
+      function renderNotifications() {
+        const notifs = window.HealthSyncState.getNotifications();
+        notifsList.innerHTML = notifs.slice(0,5).map(n => `
+          <div class="notification-item ${n.read ? '' : 'unread'}">
+            <div class="notification-dot" aria-hidden="true"></div>
+            <div>
+              <strong>${n.message}</strong>
+              <p>${new Date(n.timestamp).toLocaleString()}</p>
+            </div>
+            <span class="notification-time">${new Date(n.timestamp).toLocaleTimeString()}</span>
+          </div>
+        `).join('');
+      }
+
+      // Approval Queue
+      function renderApprovalQueue() {
+        const pending = window.HealthSyncState.getAppointments().filter(a => a.status === 'pending');
+        queueContainer.innerHTML = `
+          <table class="approval-table">
+            <thead>
+              <tr>
+                <th>Patient Appt</th>
+                <th>Date/Time</th>
+                <th>Doctor</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${pending.slice(0,5).map(a => {
+                const spec = window.getSpecialtyById(a.specialtyId);
+                const doc = window.getDoctorById(a.doctorId);
+                return `
+                  <tr>
+                    <td>${spec.label}</td>
+                    <td>${window.formatDate(a.date)} ${a.time}</td>
+                    <td>${doc.name}</td>
+                    <td>
+                      <button onclick="window.HealthSyncState.updateAppointment('${a.id}', {status: 'confirmed'}); this.closest('tr').style.opacity = '0.5';">Approve</button>
+                      <button onclick="window.HealthSyncState.updateAppointment('${a.id}', {status: 'cancelled'});">Reject</button>
+                    </td>
+                  </tr>
+                `;
+              }).join('')}
+            </tbody>
+          </table>
+        `;
+      }
+
+      renderMetrics();
+      renderNotifications();
+      renderApprovalQueue();
+
+      // Re-render on state change
+      window.HealthSyncState.subscribe(() => {
+        renderMetrics();
+        renderNotifications();
+        renderApprovalQueue();
+      });
+    });
+  </script>
+</body>
+</html>

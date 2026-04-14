@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HealthSync Clinic</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-bg" aria-hidden="true">
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
+    <div class="grid-fade"></div>
+  </div>
+
+  <header class="topbar">
+    <div class="brand-block">
+      <div class="brand-mark">HS</div>
+      <div>
+        <p class="eyebrow">Connected Care Platform</p>
+        <h1>HealthSync Clinic</h1>
+      </div>
+    </div>
+    <nav class="topnav">
+      <a href="#wizard">Book Care</a>
+      <a href="locations.html">Locations</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <main class="layout">
+    <section class="hero card">
+      <div class="hero-intro">
+        <div class="hero-copy">
+          <p class="eyebrow">Thoughtful Digital Care</p>
+          <h2>Book the right appointment in a few calm, guided steps.</h2>
+          <p class="hero-text">
+            HealthSync turns scheduling into a steady, one-question-at-a-time experience. Patients can choose a specialty, match with a doctor, pick a time, and confirm without feeling buried in forms. Staff and admins can continue from the same information inside their role-based dashboards.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-link" href="#wizard">Book an Appointment</a>
+            <a class="secondary-link" href="login.html">Open Portal Login</a>
+          </div>
+          <div class="hero-concept">
+            <span class="concept-tag">Design Direction</span>
+            <p>
+              The homepage blends hospitality warmth with clinical clarity, giving the booking journey a more reassuring tone without losing structure or trust.
+            </p>
+          </div>
+        </div>
+
+        <aside class="hero-overview">
+          <div class="hero-notice">
+            <p class="eyebrow">Why It Feels Easier</p>
+            <h3>Patients always know what comes next.</h3>
+            <p>
+              Clear prompts, visible progress, and automatic save states help people move forward with less hesitation from the first click to confirmation.
+            </p>
+          </div>
+
+          <div class="hero-stat-grid">
+            <div class="hero-stat">
+              <span>Branches</span>
+              <strong>4</strong>
+            </div>
+            <div class="hero-stat">
+              <span>Active Doctors</span>
+              <strong id="heroDoctorCount">0</strong>
+            </div>
+            <div class="hero-stat">
+              <span>Awaiting Review</span>
+              <strong id="heroPendingCount">0</strong>
+            </div>
+            <div class="hero-stat callout">
+              <span>Booking Promise</span>
+              <strong>Every step saves automatically</strong>
+              <p>Patients can pause and return later without losing their progress.</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <div class="hero-showcase">
+        <div class="carousel-card">
+          <div class="carousel-topbar">
+            <span class="carousel-chip">Inside the Care Experience</span>
+            <div class="carousel-controls">
+              <button id="carouselPrev" class="carousel-button" type="button" aria-label="Previous slide">Prev</button>
+              <button id="carouselNext" class="carousel-button" type="button" aria-label="Next slide">Next</button>
+            </div>
+          </div>
+
+          <div class="carousel-stage" id="careCarousel">
+            <article class="carousel-slide active" data-slide-caption="A bright welcome area that feels calm, guided, and easy to navigate.">
+              <img src="https://images.pexels.com/photos/8459996/pexels-photo-8459996.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Bright clinic lobby with calm seating and reception desk." loading="eager" referrerpolicy="no-referrer">
+              <div class="carousel-overlay">
+                <p class="carousel-kicker">Arrival Experience</p>
+                <h3>A welcome that feels calm from the start</h3>
+                <p>Patients feel oriented, comfortable, and ready for the visit ahead.</p>
+              </div>
+            </article>
+
+            <article class="carousel-slide" data-slide-caption="A consultation space designed for focus, clarity, and personal attention.">
+              <img src="https://images.pexels.com/photos/8312841/pexels-photo-8312841.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Doctor consultation room with patient discussion and digital records." loading="lazy" referrerpolicy="no-referrer">
+              <div class="carousel-overlay">
+                <p class="carousel-kicker">Clinical Confidence</p>
+                <h3>Consultations that feel clear and personal</h3>
+                <p>Clean information and a reassuring setting support better conversations.</p>
+              </div>
+            </article>
+
+            <article class="carousel-slide" data-slide-caption="The booking flow carries the same calm experience onto mobile.">
+              <img src="https://images.pexels.com/photos/19957215/pexels-photo-19957215.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Doctor using a smartphone and tablet for a digital healthcare consultation." loading="lazy" referrerpolicy="no-referrer">
+              <div class="carousel-overlay">
+                <p class="carousel-kicker">Digital Comfort</p>
+                <h3>Booking that stays simple on any screen</h3>
+                <p>Clear choices and a gentle pace keep the process moving without pressure.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="carousel-footer">
+            <div class="carousel-dots" id="carouselDots">
+              <button class="carousel-dot active" type="button" aria-label="Go to slide 1"></button>
+              <button class="carousel-dot" type="button" aria-label="Go to slide 2"></button>
+              <button class="carousel-dot" type="button" aria-label="Go to slide 3"></button>
+            </div>
+            <p class="carousel-caption" id="carouselCaption">
+              A bright welcome area that feels calm, guided, and easy to navigate.
+            </p>
+          </div>
+        </div>
+
+        <div class="hero-feature-strip">
+          <article class="hero-feature">
+            <span>01</span>
+            <h3>Choose the care you need</h3>
+            <p>Start with the right specialty so the next steps feel relevant and easy to follow.</p>
+          </article>
+
+          <article class="hero-feature">
+            <span>02</span>
+            <h3>See the best available fit</h3>
+            <p>Pick a doctor, date, and time with a flow that narrows choices one step at a time.</p>
+          </article>
+
+          <article class="hero-feature">
+            <span>03</span>
+            <h3>Confirm with confidence</h3>
+            <p>A live summary keeps each decision visible before the appointment request is submitted.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="wizard" class="booking-layout">
+      <article class="card wizard-card">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Core Experience</p>
+            <h2>Build your appointment step by step</h2>
+          </div>
+          <button id="resetWizard" class="ghost-button" type="button">Start Over</button>
+        </div>
+
+        <div class="progress-row">
+          <div>
+            <p class="progress-title" id="stepLabel">Step 1 of 4</p>
+            <p class="progress-subtitle" id="stepSubtitle">Select the type of care you need.</p>
+          </div>
+          <span class="autosave-chip">Autosave Active</span>
+        </div>
+
+        <div class="progress-track" aria-hidden="true">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+
+        <div class="wizard-panel">
+          <p class="wizard-question" id="wizardQuestion"></p>
+          <div id="wizardScreen" class="wizard-screen"></div>
+        </div>
+
+        <div class="wizard-nav">
+          <button id="backButton" class="nav-button muted" type="button">Back</button>
+          <button id="nextButton" class="nav-button primary" type="button">Continue</button>
+        </div>
+        <div id="toast" class="toast" aria-live="polite" role="status"></div>
+      </article>
+
+      <aside class="card side-card">
+        <div class="section-head compact">
+          <div>
+            <p class="eyebrow">Booking Snapshot</p>
+            <h2>Your selections</h2>
+          </div>
+        </div>
+
+        <div class="summary-list">
+          <div class="summary-item">
+            <span>Specialty</span>
+            <strong id="summarySpecialty">Choose a specialty</strong>
+          </div>
+          <div class="summary-item">
+            <span>Doctor</span>
+            <strong id="summaryDoctor">Choose a doctor</strong>
+          </div>
+          <div class="summary-item">
+            <span>Date</span>
+            <strong id="summaryDate">Pick a date</strong>
+          </div>
+          <div class="summary-item">
+            <span>Time</span>
+            <strong id="summaryTime">Pick a time</strong>
+          </div>
+        </div>
+
+        <div class="side-note" id="resumeNotice">
+          Your progress stays saved in this browser, so you can step away and finish later.
+        </div>
+
+        <div class="state-card">
+          <p class="state-title">Recommended production approach</p>
+          <ul class="plain-list">
+            <li>Persist wizard state so unfinished bookings survive refreshes and reconnects.</li>
+            <li>Send the final appointment to the backend only after confirmation.</li>
+            <li>Validate each step before patients move forward.</li>
+          </ul>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <script src="state.js"></script>
+  <script src="wizard.js"></script>
+</body>
+</html>
