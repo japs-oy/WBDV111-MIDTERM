@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design - VelvetCake Bakery</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .page-container { 
+      min-height: calc(100vh - 80px); 
+      padding: 2rem; 
+      display: flex; 
+      flex-direction: column; 
+      align-items: center; 
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="logo">🍰 VelvetCake</a>
+      <ul class="nav-links">
+        <li><a href="orders.html">Orders</a></li>
+        <li><a href="design.html">Design</a></li>
+        <li><a href="pickup.html">Pickup</a></li>
+        <li><button id="info-btn" class="cream-btn">Schedule 📅</button></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-container">
+    <h1 style="color: #a0522d; margin-bottom: 1rem;">Cake Design Studio</h1>
+    <p style="max-width: 600px; text-align: center; color: #666; margin-bottom: 2rem;">Choose from 8 delicious and delectable designs.</p>
+<div class="design-carousel">
+      <button id="prev-btn" class="carousel-btn prev">‹</button>
+      <div class="carousel-track">
+        <div class="design-item glass-card">
+          <img src="images/velvetcake.jpg" alt="Classic Velvet">
+          <h4>Classic Velvet</h4>
+          <p>Red velvet layers</p>
+        </div>
+        <div class="design-item glass-card">
+          <img src="images/chococake2.jpg" alt="Chocolate">
+          <h4>Chocolate</h4>
+          <p>Rich cocoa</p>
+        </div>
+        <div class="design-item glass-card">
+          <img src="images/berrycake.jpg" alt="Berry">
+          <h4>Berry Bliss</h4>
+          <p>Strawberries and other berries</p>
+        </div>
+        <div class="design-item glass-card">
+          <img src="images/cococake.jpg" alt="Coconut">
+          <h4>Coconut Dream</h4>
+          <p>Tropical</p>
+        </div>
+        <div class="design-item glass-card">
+          <img src="images/caramelcake2.jpg" alt="Caramel">
+          <h4>Caramel Swirl</h4>
+          <p>Salted caramel</p>
+        </div>
+        <div class="design-item glass-card">
+          <img src="images/lemoncake2.jpg" alt="Lemon">
+          <h4>Lemon Zest</h4>
+          <p>Citrus burst</p>
+        </div>
+        <div class="design-item glass-card">
+          <img src="images/oreocake.jpg" alt="Oreo">
+          <h4>Oreo Crunch</h4>
+          <p>Cookie lovers</p>
+        </div>
+        <div class="design-item glass-card">
+          <img src="images/matchacake.jpg" alt="Matcha">
+          <h4>Matcha Green</h4>
+          <p>Green tea bliss</p>
+        </div>
+      </div>
+      <button id="next-btn" class="carousel-btn next">›</button>
+    </div>
+    <div style="margin-top: 2rem;">
+      <a href="orders.html"><button class="cream-btn">Add to Orders</button></a>
+    </div>
+  </div>
+
+  <div id="schedule-modal" class="modal">
+    <div class="modal-content glass-card">
+      <span class="close" data-close-modal>&times;</span>
+      <h2>📅 Schedule</h2>
+      <ul style="list-style: none; padding: 1rem 0;">
+        <li>Mon-Fri: 9AM-8PM</li>
+        <li>Sat-Sun: 10AM-6PM</li>
+        <li>Custom: 48hr</li>
+      </ul>
+      <button class="cream-btn" style="width: 100%;">Book</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
