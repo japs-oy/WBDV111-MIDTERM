@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WasteTech Create Account</title>
+    <link rel="stylesheet" href="stayles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container nav-container">
+                <div class="logo">
+                    <i class="fas fa-recycle"></i> WasteTech
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="general.html">Home</a></li>
+                    <li><a href="login.html">Log in</a></li>
+                    <li><a href="signup.html">Sign up</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-shell">
+                <div class="hero-content">
+                    <h1>Create Your WasteTech Account</h1>
+                    <p>Register for your member account to manage orders, submit support tickets, and access product recommendations.</p>
+                    <form class="contact-form signup-form" action="signup-success.html" method="get">
+                        <label for="signup-name">Full Name</label>
+                        <input id="signup-name" name="full_name" type="text" placeholder="Enter your full name" required>
+
+                        <label for="signup-email">Email Address</label>
+                        <input id="signup-email" name="email" type="email" placeholder="Enter your email address" required>
+
+                        <label for="signup-phone">Phone Number</label>
+                        <input id="signup-phone" name="phone" type="tel" placeholder="Enter your phone number" required>
+
+                        <label for="signup-address">Address</label>
+                        <input id="signup-address" name="address" type="text" placeholder="Enter your address" required>
+
+                        <label for="signup-password">Password</label>
+                        <input id="signup-password" name="password" type="password" placeholder="Create your password" required>
+
+                        <label for="signup-confirm-password">Confirm Password</label>
+                        <input id="signup-confirm-password" name="confirm_password" type="password" placeholder="Confirm your password" required>
+
+                        <button type="submit">Create Account</button>
+                    </form>
+                </div>
+                <div class="hero-image">
+                    <div class="image-placeholder" data-text="Join WasteTech to manage your account, track orders, and receive support updates from one member portal.">
+                        <img src="machine.jpg" alt="WasteTech sign up view">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 WasteTech. All rights reserved. | Waste Management & Sustainability</p>
+        </div>
+    </footer>
+</body>
+</html>

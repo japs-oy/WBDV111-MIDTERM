@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WasteTech Sign up / Log in</title>
+    <link rel="stylesheet" href="stayles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container nav-container">
+                <div class="logo">
+                    <i class="fas fa-recycle"></i> WasteTech
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="general.html">Home</a></li>
+                    <li><a href="login.html">Log in</a></li>
+                    <li><a href="signup.html">Sign up</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-shell">
+                <div class="hero-content">
+                    <h1>Sign up / Log in</h1>
+                    <p>Enter your account details and choose the portal you want to access.</p>
+                    <div class="ticket-support-grid account-access-grid">
+                        <div class="ticket-form-panel">
+                            <h3>Portal Access</h3>
+                            <p>Sign in to continue to your selected WasteTech portal.</p>
+                            <form class="contact-form login-access-form" action="login.html#login-general-response" method="get">
+                                <label for="login-email">Email</label>
+                                <input id="login-email" name="email" type="email" placeholder="Enter your email" required>
+
+                                <label for="login-password">Password</label>
+                                <input id="login-password" name="password" type="password" placeholder="Enter your password" required>
+
+                                <div class="portal-action-grid">
+                                    <button type="submit" formaction="login.html#login-general-response">General User</button>
+                                    <button type="submit" formaction="login.html#login-user-response">Registered User</button>
+                                    <button type="submit" formaction="login.html#login-admin-response">Admin</button>
+                                    <button type="submit" formaction="login.html#login-superadmin-response">Super Admin</button>
+                                </div>
+                            </form>
+                            <p class="form-helper-text">Need an account? <a href="signup.html" class="inline-link">Create one here</a>.</p>
+                        </div>
+
+                        <div class="ticket-response-panel">
+                            <div id="login-general-response" class="access-response-card">
+                                <div class="support-response-header">
+                                    <span class="response-badge">Access Granted</span>
+                                    <span class="response-ticket-id">Portal: General User</span>
+                                </div>
+                                <h3>General User Access Ready</h3>
+                                <p>Your general access portal is ready. Continue to the public WasteTech experience to browse products and contact the team.</p>
+                                <div class="response-meta">
+                                    <p><strong>Status:</strong> Active</p>
+                                    <p><strong>Portal:</strong> General User</p>
+                                    <p><strong>Next Step:</strong> Continue to home view</p>
+                                </div>
+                                <div class="role-links">
+                                    <a href="general.html" class="cta-button">Open General View</a>
+                                </div>
+                            </div>
+
+                            <div id="login-user-response" class="access-response-card">
+                                <div class="support-response-header">
+                                    <span class="response-badge">Access Granted</span>
+                                    <span class="response-ticket-id">Portal: Registered User</span>
+                                </div>
+                                <h3>Registered User Access Ready</h3>
+                                <p>Your member portal is available now. Continue to track orders, manage support requests, and update your account details.</p>
+                                <div class="response-meta">
+                                    <p><strong>Status:</strong> Active</p>
+                                    <p><strong>Portal:</strong> Registered User</p>
+                                    <p><strong>Next Step:</strong> Continue to user dashboard</p>
+                                </div>
+                                <div class="role-links">
+                                    <a href="user.html" class="cta-button">Open User View</a>
+                                </div>
+                            </div>
+
+                            <div id="login-admin-response" class="access-response-card">
+                                <div class="support-response-header">
+                                    <span class="response-badge">Access Granted</span>
+                                    <span class="response-ticket-id">Portal: Admin</span>
+                                </div>
+                                <h3>Admin Access Ready</h3>
+                                <p>Your admin tools are available. Continue to review orders, manage products, and oversee user activity.</p>
+                                <div class="response-meta">
+                                    <p><strong>Status:</strong> Active</p>
+                                    <p><strong>Portal:</strong> Admin</p>
+                                    <p><strong>Next Step:</strong> Continue to admin dashboard</p>
+                                </div>
+                                <div class="role-links">
+                                    <a href="admin.html" class="cta-button">Open Admin View</a>
+                                </div>
+                            </div>
+
+                            <div id="login-superadmin-response" class="access-response-card">
+                                <div class="support-response-header">
+                                    <span class="response-badge">Access Granted</span>
+                                    <span class="response-ticket-id">Portal: Super Admin</span>
+                                </div>
+                                <h3>Super Admin Access Ready</h3>
+                                <p>Your system-wide controls are available. Continue to reports, role management, and platform oversight.</p>
+                                <div class="response-meta">
+                                    <p><strong>Status:</strong> Active</p>
+                                    <p><strong>Portal:</strong> Super Admin</p>
+                                    <p><strong>Next Step:</strong> Continue to super admin dashboard</p>
+                                </div>
+                                <div class="role-links">
+                                    <a href="superadmin.html" class="cta-button">Open Super Admin View</a>
+                                </div>
+                            </div>
+
+                            <div class="response-placeholder">
+                                <h3>Access Center</h3>
+                                <p>Choose your portal and submit your account details to receive your access status here.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="credentials-panel">
+                        <h2>Account Credentials</h2>
+                        <p class="credentials-note">Use the account below for the portal you want to open.</p>
+                        <div class="credentials-list">
+                            <div class="credentials-item">
+                                <h3>General User</h3>
+                                <p><strong>Email:</strong> general@example.com</p>
+                                <p><strong>Password:</strong> general123</p>
+                            </div>
+                            <div class="credentials-item">
+                                <h3>Registered User</h3>
+                                <p><strong>Email:</strong> user@example.com</p>
+                                <p><strong>Password:</strong> user123</p>
+                            </div>
+                            <div class="credentials-item">
+                                <h3>Admin</h3>
+                                <p><strong>Email:</strong> admin@example.com</p>
+                                <p><strong>Password:</strong> admin123</p>
+                            </div>
+                            <div class="credentials-item">
+                                <h3>Super Admin</h3>
+                                <p><strong>Email:</strong> superadmin@example.com</p>
+                                <p><strong>Password:</strong> super123</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-placeholder" data-text="Role-based access point for general browsing, member tools, admin operations, and super admin controls.">
+                        <img src="machine.jpg" alt="WasteTech login view">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 WasteTech. All rights reserved. | Waste Management & Sustainability</p>
+        </div>
+    </footer>
+</body>
+</html>

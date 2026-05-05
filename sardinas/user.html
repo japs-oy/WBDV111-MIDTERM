@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WasteTech User View</title>
+    <link rel="stylesheet" href="stayles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container nav-container">
+                <div class="logo">
+                    <i class="fas fa-recycle"></i> WasteTech User
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#order-history">Order History</a></li>
+                    <li><a href="#support">Support/Tickets</a></li>
+                    <li><a href="#profile">Profile Management</a></li>
+                    <li><a href="#products">Products</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container hero-shell">
+                <div class="hero-content">
+                    <h1>Welcome Back to Your WasteTech Account</h1>
+                    <p>Track your orders, manage support requests, update your profile, and review recommended products from one user-focused view.</p>
+                </div>
+                <div class="hero-image">
+                    <div class="image-placeholder" data-text="Member tools for purchase tracking, support tickets, profile updates, and product access.">
+                        <img src="machine(1).jpg" alt="WasteTech user view">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="order-history" class="dashboard">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Order History</h2>
+                    <p>Review recent product orders, delivery schedules, and current fulfillment status.</p>
+                </div>
+                <div class="overview-section">
+                    <table class="overview-table">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Product</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>WT-201</td>
+                                <td>Household Segregation Kit</td>
+                                <td>May 1, 2026</td>
+                                <td>Delivered</td>
+                            </tr>
+                            <tr>
+                                <td>WT-188</td>
+                                <td>Color-Coded Bin Labels</td>
+                                <td>April 25, 2026</td>
+                                <td>Shipped</td>
+                            </tr>
+                            <tr>
+                                <td>WT-171</td>
+                                <td>Eco Depot Starter Pack</td>
+                                <td>April 16, 2026</td>
+                                <td>Processing</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section id="support" class="about">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Support/Tickets</h2>
+                    <p>Monitor open concerns and send a new request to the support team when you need help.</p>
+                </div>
+                <div class="dashboard-grid">
+                    <div class="dashboard-card">
+                        <h3><i class="fas fa-life-ring"></i> Open Ticket</h3>
+                        <p>#SUP-044 is waiting for a delivery update on your recycling bin request.</p>
+                    </div>
+                    <div class="dashboard-card">
+                        <h3><i class="fas fa-check-circle"></i> Resolved Ticket</h3>
+                        <p>#SUP-038 was closed after your account preferences were updated successfully.</p>
+                    </div>
+                    <div class="dashboard-card">
+                        <h3><i class="fas fa-clock"></i> Average Response</h3>
+                        <p>Most user tickets receive an initial reply within 4 business hours.</p>
+                    </div>
+                </div>
+                <div class="dashboard-grid info-grid">
+                    <div class="dashboard-card">
+                        <h3><i class="fas fa-envelope-open-text"></i> Ticket Email</h3>
+                        <p>tickets@wastetech.example</p>
+                    </div>
+                    <div class="dashboard-card">
+                        <h3><i class="fas fa-comments"></i> Support Line</h3>
+                        <p>Live support is available from 8:00 AM to 5:00 PM on weekdays.</p>
+                    </div>
+                    <div class="dashboard-card">
+                        <h3><i class="fas fa-file-alt"></i> Ticket Reference</h3>
+                        <p>Keep your order ID ready when requesting help for faster assistance.</p>
+                    </div>
+                </div>
+
+                <div class="ticket-support-grid">
+                    <div class="ticket-form-panel">
+                        <h3>Submit a Ticket</h3>
+                        <p>Fill out the form below to send your concern to the support team.</p>
+                        <form class="contact-form" action="user.html#ticket-response" method="get">
+                            <label for="ticket-subject">Subject</label>
+                            <input id="ticket-subject" name="subject" type="text" placeholder="Enter your ticket subject" required>
+
+                            <label for="ticket-order-id">Order ID</label>
+                            <input id="ticket-order-id" name="order_id" type="text" placeholder="Example: WT-201" required>
+
+                            <label for="ticket-email">Email</label>
+                            <input id="ticket-email" name="email" type="email" placeholder="Enter your email" required>
+
+                            <label for="ticket-type">Concern Type</label>
+                            <select id="ticket-type" name="concern_type" required>
+                                <option value="">Select a concern</option>
+                                <option value="delivery">Delivery Update</option>
+                                <option value="product">Product Issue</option>
+                                <option value="billing">Billing Concern</option>
+                                <option value="account">Account Support</option>
+                            </select>
+
+                            <label for="ticket-message">Message</label>
+                            <textarea id="ticket-message" name="message" placeholder="Describe your concern" required></textarea>
+
+                            <button type="submit">Submit Ticket</button>
+                        </form>
+                    </div>
+
+                    <div class="ticket-response-panel">
+                        <div id="ticket-response" class="support-response-card">
+                            <div class="support-response-header">
+                                <span class="response-badge">Support Reply</span>
+                                <span class="response-ticket-id">Ticket ID: SUP-105</span>
+                            </div>
+                            <h3>Support Team Reply</h3>
+                            <p>Thank you for contacting WasteTech Support. We have received your ticket and assigned it to our customer care queue for review.</p>
+                            <p>Your concern has been marked as <strong>In Review</strong>, and a support representative will follow up within 4 business hours.</p>
+                            <div class="response-meta">
+                                <p><strong>Status:</strong> In Review</p>
+                                <p><strong>Priority:</strong> Standard</p>
+                                <p><strong>Estimated Follow-up:</strong> Within today</p>
+                            </div>
+                        </div>
+
+                        <div class="response-placeholder">
+                            <h3>Response Center</h3>
+                            <p>Your latest support update will appear here after you submit your ticket.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="profile" class="dashboard">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Profile Management</h2>
+                    <p>Keep your account details, delivery preferences, and notification settings up to date.</p>
+                </div>
+                <div class="dashboard-grid">
+                    <div class="dashboard-card">
+                        <h3><i class="fas fa-id-card"></i> Account Details</h3>
+                        <p>Name, email, and mobile information are ready for quick edits when profile changes are needed.</p>
+                    </div>
+                    <div class="dashboard-card">
+                        <h3><i class="fas fa-map-marker-alt"></i> Delivery Address</h3>
+                        <p>Save your preferred drop-off address so future orders can be processed faster.</p>
+                    </div>
+                    <div class="dashboard-card">
+                        <h3><i class="fas fa-bell"></i> Notifications</h3>
+                        <p>Choose whether to receive updates about tickets, deliveries, and new product releases.</p>
+                    </div>
+                </div>
+
+                <div class="ticket-support-grid profile-management-grid">
+                    <div class="ticket-form-panel">
+                        <h3>Update Profile</h3>
+                        <p>Manage your contact details, delivery preferences, and account updates from one form.</p>
+                        <form class="contact-form" action="user.html#profile-saved" method="get">
+                            <label for="profile-name">Full Name</label>
+                            <input id="profile-name" name="full_name" type="text" placeholder="Enter your full name" required>
+
+                            <label for="profile-email">Email Address</label>
+                            <input id="profile-email" name="email" type="email" placeholder="Enter your email address" required>
+
+                            <label for="profile-phone">Phone Number</label>
+                            <input id="profile-phone" name="phone" type="tel" placeholder="Enter your phone number" required>
+
+                            <label for="profile-address">Delivery Address</label>
+                            <input id="profile-address" name="address" type="text" placeholder="Enter your delivery address" required>
+
+                            <label for="profile-updates">Notification Preference</label>
+                            <select id="profile-updates" name="notifications" required>
+                                <option value="">Select a preference</option>
+                                <option value="all">All Updates</option>
+                                <option value="orders">Orders Only</option>
+                                <option value="support">Support Only</option>
+                                <option value="none">No Notifications</option>
+                            </select>
+
+                            <button type="submit">Save Changes</button>
+                        </form>
+                    </div>
+
+                    <div class="ticket-response-panel">
+                        <div id="profile-saved" class="profile-response-card">
+                            <div class="support-response-header">
+                                <span class="response-badge">Profile Updated</span>
+                                <span class="response-ticket-id">Account Status: Saved</span>
+                            </div>
+                            <h3>Profile Changes Saved</h3>
+                            <p>Your account information has been updated successfully. Your contact details and preferences are now ready for future orders and support requests.</p>
+                            <div class="response-meta">
+                                <p><strong>Status:</strong> Updated</p>
+                                <p><strong>Notifications:</strong> Active</p>
+                                <p><strong>Delivery Details:</strong> Ready for use</p>
+                            </div>
+                        </div>
+
+                        <div class="response-placeholder">
+                            <h3>Profile Updates</h3>
+                            <p>Your latest profile changes will appear here after you submit the form.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="products" class="products">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Products</h2>
+                    <p>Based on your account activity, these product options fit the most common household and small-office waste needs.</p>
+                </div>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <div class="image-placeholder">Starter Pack</div>
+                        </div>
+                        <h3>Eco Depot Starter Pack</h3>
+                        <p>Reusable guides, labels, and sorting tools packed for homes or condo units.</p>
+                        <div class="price">$89.99</div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <div class="image-placeholder">Compost Bin</div>
+                        </div>
+                        <h3>Kitchen Compost Bin</h3>
+                        <p>Compact sealed bin designed for everyday food waste before outdoor disposal.</p>
+                        <div class="price">$34.99</div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <div class="image-placeholder">Refill Labels</div>
+                        </div>
+                        <h3>Replacement Label Set</h3>
+                        <p>Refresh worn-out labels and keep your sorting system easy for everyone to follow.</p>
+                        <div class="price">$12.99</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 WasteTech. All rights reserved. | Waste Management & Sustainability</p>
+        </div>
+    </footer>
+</body>
+</html>
