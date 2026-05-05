@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WasteTech Super Admin View</title>
+    <link rel="stylesheet" href="stayles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container nav-container">
+                <div class="logo">
+                    <i class="fas fa-recycle"></i> WasteTech Super Admin
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#dashboard">Dashboard</a></li>
+                    <li><a href="#reports">Reports</a></li>
+                    <li><a href="#roles">Role Management</a></li>
+                    <li><a href="login.html" class="nav-login-link">Switch Account</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="dashboard" class="hero">
+            <div class="container hero-shell">
+                <div class="hero-content">
+                    <h1>Super Admin Dashboard</h1>
+                    <p>Review platform-wide health, analyze performance reports, and manage high-level roles across the WasteTech system.</p>
+                    <div class="role-links">
+                        <a href="login.html" class="cta-button">Log In Again</a>
+                        <a href="login.html" class="view-all">Switch Account</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-placeholder" data-text="System-wide oversight covering reporting, permissions, platform health, and governance.">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="dashboard">
+            <div class="container">
+                <div class="dashboard-grid">
+                    <div class="dashboard-card">
+                        <h3><i class="fas fa-server"></i> Platform Status</h3>
+                        <p>All core services are online with no critical disruptions reported today.</p>
+                        <strong class="metric-value">99.94% Uptime</strong>
+                        <span class="metric-delta">No Sev-1 incidents in the last 30 days</span>
+                    </div>
+                    <div class="dashboard-card">
+                        <h3><i class="fas fa-user-lock"></i> Role Changes</h3>
+                        <p>6 access requests are waiting for final approval or rejection.</p>
+                        <strong class="metric-value">6 Pending</strong>
+                        <span class="metric-delta">2 requests exceed the 24-hour SLA</span>
+                    </div>
+                    <div class="dashboard-card">
+                        <h3><i class="fas fa-chart-line"></i> Growth Snapshot</h3>
+                        <p>User registrations increased 12% compared to the previous monthly cycle.</p>
+                        <strong class="metric-value">+12%</strong>
+                        <span class="metric-delta metric-delta-up">Strongest growth from community partners</span>
+                    </div>
+                    <div class="dashboard-card">
+                        <h3><i class="fas fa-dollar-sign"></i> Monthly Revenue</h3>
+                        <p>Platform revenue remains ahead of target with improved order completion and larger admin-managed accounts.</p>
+                        <strong class="metric-value">PHP 3.52M</strong>
+                        <span class="metric-delta metric-delta-up">+8.6% above monthly target</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="reports" class="about">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Executive Reports</h2>
+                    <p>Review the current business snapshot, operational risk signals, and cross-platform performance in one professional reporting view.</p>
+                </div>
+
+                <div class="report-layout">
+                    <article class="report-card">
+                        <div class="chart-card-header">
+                            <div>
+                                <p class="chart-eyebrow">Executive Summary</p>
+                                <h3>May 2026 Performance Brief</h3>
+                            </div>
+                            <span class="trend-badge trend-up">Stable</span>
+                        </div>
+                        <p class="chart-summary">WasteTech closed the month with stronger revenue quality, steady user growth, and improved ticket turnaround after the latest workflow changes.</p>
+                        <ul class="report-list">
+                            <li><i class="fas fa-check-circle"></i><span>Revenue exceeded target for the third consecutive month, led by admin-managed community orders.</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Order completion SLA improved after dispatch batching reduced warehouse idle time.</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Support backlog remained controlled despite a mid-month spike in onboarding requests.</span></li>
+                        </ul>
+                    </article>
+
+                    <article class="report-card">
+                        <div class="chart-card-header">
+                            <div>
+                                <p class="chart-eyebrow">Risk Watch</p>
+                                <h3>Attention Areas</h3>
+                            </div>
+                            <span class="trend-badge trend-neutral">Monitor</span>
+                        </div>
+                        <p class="chart-summary">The platform is healthy overall, but a few signals still need leadership visibility and follow-through.</p>
+                        <ul class="report-list">
+                            <li><i class="fas fa-exclamation-triangle"></i><span>Two role escalation requests are still waiting for final approval past the normal review window.</span></li>
+                            <li><i class="fas fa-exclamation-triangle"></i><span>Inventory pressure on community bins may affect May revenue unless replenishment lands on schedule.</span></li>
+                            <li><i class="fas fa-exclamation-triangle"></i><span>New enterprise onboarding demand is growing faster than current admin documentation coverage.</span></li>
+                        </ul>
+                    </article>
+                </div>
+
+                <div class="report-metrics-grid">
+                    <article class="report-metric">
+                        <span class="report-metric-label">Registered Users</span>
+                        <strong>184</strong>
+                        <span class="metric-delta metric-delta-up">+12% month-over-month</span>
+                    </article>
+                    <article class="report-metric">
+                        <span class="report-metric-label">Completed Orders</span>
+                        <strong>426</strong>
+                        <span class="metric-delta metric-delta-up">+8% month-over-month</span>
+                    </article>
+                    <article class="report-metric">
+                        <span class="report-metric-label">Open Tickets</span>
+                        <strong>12</strong>
+                        <span class="metric-delta">Down 3% from last cycle</span>
+                    </article>
+                    <article class="report-metric">
+                        <span class="report-metric-label">On-Time Fulfillment</span>
+                        <strong>96.1%</strong>
+                        <span class="metric-delta metric-delta-up">Ahead of 95% SLA target</span>
+                    </article>
+                </div>
+
+                <div class="analytics-grid">
+                    <article class="chart-card">
+                        <div class="chart-card-header">
+                            <div>
+                                <p class="chart-eyebrow">Revenue View</p>
+                                <h3>Platform Revenue vs Target</h3>
+                            </div>
+                            <span class="trend-badge trend-up">+8.6%</span>
+                        </div>
+                        <p class="chart-summary">Revenue is consistently outperforming target throughout May 2026 as larger organization orders make up a bigger share of the monthly mix.</p>
+                        <div class="line-chart-shell">
+                            <svg class="line-chart" viewBox="0 0 460 260" role="img" aria-label="Platform revenue versus target throughout May 2026">
+                                <line class="grid-line" x1="60" y1="50" x2="420" y2="50"></line>
+                                <line class="grid-line" x1="60" y1="90" x2="420" y2="90"></line>
+                                <line class="grid-line" x1="60" y1="130" x2="420" y2="130"></line>
+                                <line class="grid-line" x1="60" y1="170" x2="420" y2="170"></line>
+                                <line class="grid-line" x1="60" y1="210" x2="420" y2="210"></line>
+                                <line class="axis-line" x1="60" y1="210" x2="420" y2="210"></line>
+                                <line class="axis-line" x1="60" y1="30" x2="60" y2="210"></line>
+                                <path class="area-fill" d="M60 178 L120 168 L180 150 L240 132 L300 112 L360 88 L420 72 L420 210 L60 210 Z"></path>
+                                <polyline class="data-line-primary" points="60,178 120,168 180,150 240,132 300,112 360,88 420,72"></polyline>
+                                <polyline class="data-line-secondary" points="60,188 120,180 180,166 240,148 300,132 360,112 420,98"></polyline>
+                                <circle class="data-point" cx="60" cy="178" r="5"></circle>
+                                <circle class="data-point" cx="120" cy="168" r="5"></circle>
+                                <circle class="data-point" cx="180" cy="150" r="5"></circle>
+                                <circle class="data-point" cx="240" cy="132" r="5"></circle>
+                                <circle class="data-point" cx="300" cy="112" r="5"></circle>
+                                <circle class="data-point" cx="360" cy="88" r="5"></circle>
+                                <circle class="data-point" cx="420" cy="72" r="5"></circle>
+                                <text x="6" y="214">PHP 0</text>
+                                <text x="6" y="174">PHP 1M</text>
+                                <text x="6" y="134">PHP 2M</text>
+                                <text x="6" y="94">PHP 3M</text>
+                                <text x="6" y="54">PHP 4M</text>
+                                <text x="42" y="236">May 1</text>
+                                <text x="103" y="236">May 6</text>
+                                <text x="160" y="236">May 11</text>
+                                <text x="220" y="236">May 16</text>
+                                <text x="280" y="236">May 21</text>
+                                <text x="340" y="236">May 26</text>
+                                <text x="394" y="236">May 31</text>
+                            </svg>
+                        </div>
+                        <div class="chart-legend">
+                            <span class="legend-item"><span class="legend-dot legend-primary"></span>Actual revenue</span>
+                            <span class="legend-item"><span class="legend-dot legend-secondary"></span>Target revenue</span>
+                        </div>
+                    </article>
+
+                    <article class="chart-card">
+                        <div class="chart-card-header">
+                            <div>
+                                <p class="chart-eyebrow">Operational Load</p>
+                                <h3>Business Area Performance</h3>
+                            </div>
+                            <span class="trend-badge trend-neutral">Current</span>
+                        </div>
+                        <p class="chart-summary">Commercial activity remains strongest in managed accounts, while support volume is improving after a recent tooling refresh.</p>
+                        <div class="bar-chart">
+                            <div class="bar-row">
+                                <span class="bar-label">Revenue Throughput</span>
+                                <div class="bar-track"><span class="bar-fill" style="--bar-size: 86%;"></span></div>
+                                <span class="bar-value">86/100</span>
+                            </div>
+                            <div class="bar-row">
+                                <span class="bar-label">Order Fulfillment SLA</span>
+                                <div class="bar-track"><span class="bar-fill" style="--bar-size: 78%;"></span></div>
+                                <span class="bar-value">78/100</span>
+                            </div>
+                            <div class="bar-row">
+                                <span class="bar-label">Support Resolution</span>
+                                <div class="bar-track"><span class="bar-fill" style="--bar-size: 71%;"></span></div>
+                                <span class="bar-value">71/100</span>
+                            </div>
+                            <div class="bar-row">
+                                <span class="bar-label">Role Governance</span>
+                                <div class="bar-track"><span class="bar-fill" style="--bar-size: 64%;"></span></div>
+                                <span class="bar-value">64/100</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="overview-section report-table-shell">
+                    <h2>Operational Report Detail</h2>
+                    <table class="overview-table">
+                        <thead>
+                            <tr>
+                                <th>Domain</th>
+                                <th>Current</th>
+                                <th>Target</th>
+                                <th>Trend</th>
+                                <th>Owner</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>User Growth</td>
+                                <td>184 registered users</td>
+                                <td>170</td>
+                                <td>Up 12%</td>
+                                <td>Growth Team</td>
+                            </tr>
+                            <tr>
+                                <td>Revenue</td>
+                                <td>PHP 3.52M monthly revenue</td>
+                                <td>PHP 3.24M</td>
+                                <td>Up 8.6%</td>
+                                <td>Commercial Ops</td>
+                            </tr>
+                            <tr>
+                                <td>Open Tickets</td>
+                                <td>12 active tickets</td>
+                                <td>Below 15</td>
+                                <td>Down 3%</td>
+                                <td>Support Lead</td>
+                            </tr>
+                            <tr>
+                                <td>Order SLA</td>
+                                <td>96.1% on-time fulfillment</td>
+                                <td>95%</td>
+                                <td>Up 2.1%</td>
+                                <td>Operations</td>
+                            </tr>
+                            <tr>
+                                <td>Role Approvals</td>
+                                <td>6 pending reviews</td>
+                                <td>Below 4</td>
+                                <td>Needs attention</td>
+                                <td>Security Admin</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section id="roles" class="dashboard">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Role Management</h2>
+                    <p>Set privileges clearly across public users, account holders, admins, and super admins.</p>
+                </div>
+                <div class="overview-section">
+                    <table class="overview-table">
+                        <thead>
+                            <tr>
+                                <th>Role</th>
+                                <th>Main Access</th>
+                                <th>Approval Level</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>General</td>
+                                <td>Public browsing and contact</td>
+                                <td>Open Access</td>
+                            </tr>
+                            <tr>
+                                <td>User</td>
+                                <td>Orders, profile, support</td>
+                                <td>Account Required</td>
+                            </tr>
+                            <tr>
+                                <td>Admin</td>
+                                <td>Order, product, and user operations</td>
+                                <td>Admin Approval</td>
+                            </tr>
+                            <tr>
+                                <td>Super Admin</td>
+                                <td>Reports and role control</td>
+                                <td>Executive Approval</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 WasteTech. All rights reserved. | Waste Management & Sustainability</p>
+        </div>
+    </footer>
+</body>
+</html>
