@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WasteTech Sign up</title>
+    <link rel="stylesheet" href="stayles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar" aria-label="Primary">
+            <div class="container nav-container">
+                <div class="logo">
+                    <i class="fas fa-recycle" aria-hidden="true"></i> WasteTech
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="general.html">Home</a></li>
+                    <li><a href="login.html">Member Log in</a></li>
+                    <li><a href="signup.html">Sign up</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-shell">
+                <div class="hero-content">
+                    <h1>Create Your WasteTech Account</h1>
+                    <p>Sign up to create a registered user account for order tracking, support tickets, and profile tools.</p>
+
+                    <div class="ticket-support-grid account-access-grid">
+                        <div class="ticket-form-panel">
+                            <h3>Sign up</h3>
+                            <p>Fill out the form below to create a registered user account.</p>
+                            <form class="contact-form signup-form" action="signup.html#signup-success" method="get">
+                                <label for="signup-name">Full Name</label>
+                                <input id="signup-name" name="full_name" type="text" placeholder="Enter your full name" required>
+
+                                <label for="signup-email">Email</label>
+                                <input id="signup-email" name="email" type="email" placeholder="Enter your email" required>
+
+                                <label for="signup-password">Password</label>
+                                <input id="signup-password" name="password" type="password" placeholder="Create a password" required minlength="6">
+
+                                <label for="signup-confirm">Confirm Password</label>
+                                <input id="signup-confirm" name="confirm_password" type="password" placeholder="Confirm your password" required minlength="6">
+
+                                <input type="hidden" name="role" value="user">
+                                <p class="login-hint">This sign-up creates a Registered User account. Public browsing does not require an account.</p>
+
+                                <button type="submit">Create Account</button>
+                            </form>
+                            <p class="form-helper-text">Already have an account? <a href="login.html" class="inline-link">Log in here</a>.</p>
+                        </div>
+
+                        <div class="ticket-response-panel">
+                            <div id="signup-success" class="access-response-card">
+                                <div class="support-response-header">
+                                    <span class="response-badge">Account Created</span>
+                                    <span class="response-ticket-id">Status: Ready</span>
+                                </div>
+                                <h3>Welcome to WasteTech</h3>
+                                <p>Your registered user account has been created successfully. You can now log in and continue to the member portal.</p>
+                                <div class="response-meta">
+                                    <p><strong>Status:</strong> Active</p>
+                                    <p><strong>Account Type:</strong> Registered User</p>
+                                    <p><strong>Next Step:</strong> Log in to your member account</p>
+                                </div>
+                                <div class="role-links">
+                                    <a href="login.html" class="cta-button">Continue to Member Log in</a>
+                                </div>
+                            </div>
+
+                            <div class="response-placeholder">
+                                <h3>Sign-up Center</h3>
+                                <p>Submit the form to create your WasteTech account. Confirmation will appear here.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-placeholder" data-text="Create an account to unlock member tools, order tracking, and personalized support.">
+                        <img src="machine.jpg" alt="WasteTech sign-up illustration">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 WasteTech. All rights reserved. | Waste Management &amp; Sustainability</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WasteTech Portal Log in</title>
+    <link rel="stylesheet" href="stayles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container nav-container">
+                <div class="logo">
+                    <i class="fas fa-recycle"></i> WasteTech
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="general.html">Home</a></li>
+                    <li><a href="login.html">Log in</a></li>
+                    <li><a href="signup.html">Sign up</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-shell">
+                <div class="hero-content">
+                    <h1>Log in to Your WasteTech Portal</h1>
+                    <p>Registered users, admins, and super admins can sign in here. Public visitors can browse the site and products without an account.</p>
+                    <div class="ticket-support-grid account-access-grid auth-access-grid">
+                        <div class="ticket-form-panel">
+                            <h3>Portal Access</h3>
+                            <p>Use your registered account details below, or let the role buttons fill them in for you automatically.</p>
+                            <form class="contact-form login-access-form" action="login.html" method="get">
+                                <label for="login-email">Email</label>
+                                <input id="login-email" name="email" type="email" placeholder="Enter your email" autocomplete="username" required>
+
+                                <label for="login-password">Password</label>
+                                <input id="login-password" name="password" type="password" placeholder="Enter your password" autocomplete="current-password" required>
+
+                                <button type="submit">Log In</button>
+                            </form>
+                            <p class="login-hint">Tip: the quick-access buttons reveal each account's demo email and password, then continue to that page automatically.</p>
+                            <p class="form-helper-text">Need an account? <a href="signup.html" class="inline-link">Create one here</a>.</p>
+                            <p class="form-helper-text">Just browsing? <a href="general.html" class="inline-link">Open the public site</a>.</p>
+                        </div>
+
+                        <div class="ticket-response-panel quick-access-panel">
+                            <h3>Choose an Account</h3>
+                            <p>Select a role below to auto-enter its credentials and open that account's page right away.</p>
+                            <div class="quick-role-grid">
+                                <button type="button" class="quick-role-button" data-role="user">
+                                    <span class="quick-role-name">Registered User</span>
+                                    <span class="quick-role-target">Opens orders, profile, and support</span>
+                                    <span class="quick-role-credentials">Email: user@example.com</span>
+                                    <span class="quick-role-credentials">Password: user123</span>
+                                </button>
+                                <button type="button" class="quick-role-button" data-role="admin">
+                                    <span class="quick-role-name">Admin</span>
+                                    <span class="quick-role-target">Opens admin tools and order management</span>
+                                    <span class="quick-role-credentials">Email: admin@example.com</span>
+                                    <span class="quick-role-credentials">Password: admin123</span>
+                                </button>
+                                <button type="button" class="quick-role-button" data-role="superadmin">
+                                    <span class="quick-role-name">Super Admin</span>
+                                    <span class="quick-role-target">Opens reports and role controls</span>
+                                    <span class="quick-role-credentials">Email: superadmin@example.com</span>
+                                    <span class="quick-role-credentials">Password: super123</span>
+                                </button>
+                            </div>
+
+                            <div id="login-status" class="login-status-card" role="status" aria-live="polite">
+                                <h4 id="login-status-title">Ready to sign in</h4>
+                                <p id="login-status-text">Click a role button to fill the form and continue automatically, or use the form to sign in manually with one of the same demo accounts. Public viewing does not require a login.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-placeholder" data-text="Portal access for registered members, admin operations, and super admin controls.">
+                        <img src="machine.jpg" alt="WasteTech login view">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 WasteTech. All rights reserved. | Waste Management & Sustainability</p>
+        </div>
+    </footer>
+
+    <script>
+        const roleAccounts = {
+            user: {
+                label: 'Registered User',
+                email: 'user@example.com',
+                password: 'user123',
+                target: 'user.html',
+                destination: 'registered user dashboard'
+            },
+            admin: {
+                label: 'Admin',
+                email: 'admin@example.com',
+                password: 'admin123',
+                target: 'admin.html',
+                destination: 'admin dashboard'
+            },
+            superadmin: {
+                label: 'Super Admin',
+                email: 'superadmin@example.com',
+                password: 'super123',
+                target: 'superadmin.html',
+                destination: 'super admin dashboard'
+            }
+        };
+
+        const loginForm = document.querySelector('.login-access-form');
+        const emailInput = document.getElementById('login-email');
+        const passwordInput = document.getElementById('login-password');
+        const quickRoleButtons = document.querySelectorAll('.quick-role-button');
+        const statusCard = document.getElementById('login-status');
+        const statusTitle = document.getElementById('login-status-title');
+        const statusText = document.getElementById('login-status-text');
+
+        function setStatus(title, message, isError) {
+            statusTitle.textContent = title;
+            statusText.textContent = message;
+            statusCard.classList.toggle('is-error', Boolean(isError));
+        }
+
+        function setActiveRole(roleKey) {
+            quickRoleButtons.forEach((button) => {
+                button.classList.toggle('is-active', button.dataset.role === roleKey);
+            });
+        }
+
+        function continueToRole(roleKey) {
+            const account = roleAccounts[roleKey];
+            if (!account) {
+                return;
+            }
+
+            emailInput.value = account.email;
+            passwordInput.value = account.password;
+            setActiveRole(roleKey);
+            setStatus(
+                `Signing in as ${account.label}`,
+                `Credentials filled in. Opening the ${account.destination}.`,
+                false
+            );
+
+            window.setTimeout(() => {
+                window.location.href = account.target;
+            }, 450);
+        }
+
+        quickRoleButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                continueToRole(button.dataset.role);
+            });
+        });
+
+        loginForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const typedEmail = emailInput.value.trim().toLowerCase();
+            const typedPassword = passwordInput.value;
+            const matchedEntry = Object.entries(roleAccounts).find(([, account]) => {
+                return account.email.toLowerCase() === typedEmail && account.password === typedPassword;
+            });
+
+            if (!matchedEntry) {
+                setActiveRole('');
+                setStatus(
+                    'Account not recognized',
+                    'Use one of the three demo accounts listed in the role buttons, or click a role button to fill the credentials automatically.',
+                    true
+                );
+                return;
+            }
+
+            const [roleKey, account] = matchedEntry;
+            setActiveRole(roleKey);
+            setStatus(
+                `Signing in as ${account.label}`,
+                `Credentials verified. Opening the ${account.destination}.`,
+                false
+            );
+
+            window.setTimeout(() => {
+                window.location.href = account.target;
+            }, 450);
+        });
+    </script>
+</body>
+</html>
